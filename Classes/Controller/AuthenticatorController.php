@@ -3,7 +3,7 @@ declare(strict_types=1);
 /**
  * Copyright FraJa WeB - DEFBU (c) 2019
  */
-namespace FraJaWeB\FwAutenticator\Controller;
+namespace FraJaWeB\FwAuthenticator\Controller;
 
 /**
  * Controller Abstract
@@ -12,7 +12,7 @@ namespace FraJaWeB\FwAutenticator\Controller;
  *
  * All rights reserved
  */
-class AuthenticationController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionController {
+class AuthenticatorController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionController {
 
 
 }

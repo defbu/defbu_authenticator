@@ -14,7 +14,7 @@ defined('TYPO3_MODE') || die();
     'tx_fwauthentication',
     'bottom',
     [
-        Authentication::class => 'index'
+        Authenticator::class => 'index'
     ],
     [
         'access' => 'user',
