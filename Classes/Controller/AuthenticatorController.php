@@ -14,6 +14,11 @@ namespace FraJaWeB\FwAuthenticator\Controller;
  */
 class AuthenticatorController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionController {
 
+    /**
+     * 
+     * @var \FraJaWeB\FwAuthenticator\Domain\Repository\Backen
+     */
+    private $backendUserRepository;
 
     public function indexAction() {
         
