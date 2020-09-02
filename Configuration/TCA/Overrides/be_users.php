@@ -24,7 +24,7 @@ $temporaryColumns = array (
     ],
     'fw_authenticator_secret' => [
         'exclude' => 0,
-        'label' => 'LLL:EXT:user_sense/Resources/Private/Language/locallang_db.xlf:Secret',
+        'label' => 'LLL:EXT:fw_authenticator/Resources/Private/Language/locallang_db.xlf:Secret',
         'config' => [
             'type' => 'input',
             'size' => 30,

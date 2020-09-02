@@ -7,10 +7,10 @@
         </header>
         <body>
         	<trans-unit id="Active" xml:space="preserve">
-            	<source>Active</source>
+            	<source>Authenticator Active</source>
             </trans-unit>
             <trans-unit id="Secret" xml:space="preserve">
-            	<source>Secret</source>
+            	<source>Authenticator Secret</source>
             </trans-unit>
 
         </body>
