@@ -12,11 +12,16 @@ namespace FraJaWeB\FwAuthenticator\Controller;
  *
  * All rights reserved
  */
+
+use TYPO3\CMS\Extbase\Annotation as Extbase;
+use TYPO3\CMS\Core\Core\Environment as Environment;
+
 class AuthenticatorController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionController {
 
     /**
      *
      * @var \FraJaWeB\FwAuthenticator\Domain\Repository\BeUserRepository
+     * @Extbase\Inject
      */
     private $beUserRepository;
 
