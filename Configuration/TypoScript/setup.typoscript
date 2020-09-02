@@ -1,0 +1,13 @@
+module.tx_fwtranscript {
+    view {
+        templateRootPaths {
+            10 = EXT:fw_transcript/Resources/Private/Backend/Templates/
+        }
+        partialRootPaths {
+            10 = EXT:fw_transcript/Resources/Private/Backend/Partials/
+        }
+        layoutRootPaths {
+           10 = EXT:fw_trancsript/Resources/Private/Backend/Layouts/
+        }
+    }
+}
