@@ -15,4 +15,8 @@ namespace FraJaWeB\FwAuthenticator\Controller;
 class AuthenticatorController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionController {
 
 
+    public function indexAction() {
+        
+    }
+    
 }
