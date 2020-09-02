@@ -9,17 +9,17 @@
 defined('TYPO3_MODE') || die();
 
 \TYPO3\CMS\Extbase\Utility\ExtensionUtility::registerModule(
-    'FraJaWeB.FwAuthentication',
+    'FraJaWeB.FwAuthenticator',
     'system',
-    'tx_fwauthentication',
+    'tx_fwauthenticator',
     'bottom',
     [
         Authenticator::class => 'index'
     ],
     [
         'access' => 'user',
-        //'icon' => 'EXT:fw_authentication/Resources/Public/Icons/module-beuser.svg',
-        'labels' => 'LLL:EXT:fw_authentication/Resources/Private/Language/locallang_mod.xlf',
+        //'icon' => 'EXT:fw_authenticator/Resources/Public/Icons/module-beuser.svg',
+        'labels' => 'LLL:EXT:fw_authenticator/Resources/Private/Language/locallang_mod.xlf',
     ]
     );
 
