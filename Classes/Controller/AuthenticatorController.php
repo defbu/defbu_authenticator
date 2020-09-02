@@ -16,12 +16,16 @@ class AuthenticatorController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionCo
 
     /**
      *
-     * @var \FraJaWeB\FwAuthenticator\Domain\Repository\Backen
+     * @var \FraJaWeB\FwAuthenticator\Domain\Repository\BeUserRepository
      */
-    private $backendUserRepository;
+    private $beUserRepository;
 
     public function indexAction() {
-        print_r($GLOBALS['BE_USER']->user);
+        $uid = $GLOBALS['BE_USER']->user["uid"];
+        $beUser = $this->beUserRepository->findByUid($uid);
+        if (isset($beUser)) {
+            echo $beUser->getUid();
+        }
     }
 
 }
