@@ -9,7 +9,7 @@
 defined('TYPO3_MODE') || die();
 
 \TYPO3\CMS\Extbase\Utility\ExtensionUtility::registerModule(
-    'FraJaWeb.FwAuthentication',
+    'FraJaWeB.FwAuthentication',
     'system',
     'tx_fwauthentication',
     'bottom',
