@@ -14,7 +14,7 @@ defined('TYPO3_MODE') || die();
     'tx_fwauthentication',
     'bottom',
     [
-        \TYPO3\CMS\FwAuthentication\Controller\AuthenticationController::class => 'index'
+        AuthenticationController::class => 'index'
     ],
     [
         'access' => 'user',
