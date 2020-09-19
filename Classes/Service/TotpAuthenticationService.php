@@ -16,6 +16,11 @@ use TYPO3\CMS\Frontend\Authentication\FrontendUserAuthentication;
  */
 class TotpAuthenticationService extends \TYPO3\CMS\Frontend\Authentication\BackendUserAuthentication
 {
+    public function init() {
+        file_put_contents('/home/alfa10/auth','test2'."\n",FILE_APPEND);
+    }
+
+
     public function initAuth() {
         file_put_contents('/home/alfa10/auth','test'."\n",FILE_APPEND);
     }
