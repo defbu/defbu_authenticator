@@ -34,7 +34,7 @@ defined('TYPO3_MODE') || die();
     )
 );
 
-$GLOBALS['TYPO3_CONF_VARS']['EXTCONF']['backend']['loginProviders'][1600536448]['provider'] = FraJaWeB\FwAuthenticator\Service\TotpAuthenticationService::class;
+//$GLOBALS['TYPO3_CONF_VARS']['EXTCONF']['backend']['loginProviders'][1600536448]['provider'] = FraJaWeB\FwAuthenticator\Service\TotpAuthenticationService::class;
 
 
 
