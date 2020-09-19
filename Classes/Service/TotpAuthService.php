@@ -14,7 +14,7 @@ use TYPO3\CMS\Frontend\Authentication\FrontendUserAuthentication;
  *
  * All rights reserved
  */
-class TotpAuthService extends \TYPO3\CMS\Core\Authentication\AbstractAuthenticationService
+class TotpAuthService extends \TYPO3\CMS\Core\Authentication\AuthenticationService
 {
 
     public function authUser(array $user) {
