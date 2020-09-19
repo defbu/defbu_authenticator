@@ -80,7 +80,7 @@ class TotpService extends \TYPO3\CMS\Core\Service\AbstractService {
 
             if ($j >= 8) {
                 $j = $j - 8;
-                $binary .= chr(($n & (0&FF << $j)) >> $j);
+                $binary .= chr(($n & (0xFF << $j)) >> $j);
             }
         }
 
