@@ -1,11 +1,11 @@
 
-#t3-login-yubikey-section input.t3-yubikey {
+#t3-login-fwauthenticator-section input.t3-fwauthenticator {
 	background-image: url('/typo3conf/ext/fw_authenticator/Resources/Public/Icons/icon.svg');
 	background-repeat: no-repeat;
 	background-position: right 10px center;
 }
 
-.t3yubikey {
+.t3-fwauthenticator-key {
     width: 16px;
     height: 16px;
     background-image: url('/typo3conf/ext/fw_authenticator/Resources/Public/Icons/icon.svg');
@@ -13,6 +13,6 @@
     display: block;
 }
 
-.t3js-login-yubikey-field {
+.t3js-login-fwauthenticator-field {
     height: 41px;
 }
