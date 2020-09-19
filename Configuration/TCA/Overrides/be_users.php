@@ -15,7 +15,6 @@ if (!defined('TYPO3_MODE')) {
 $temporaryColumns = array (
 
     'tx_fwauthenticator_active' => [
-        'exclude' => 1,
         'label' => 'LLL:EXT:fw_authenticator/Resources/Private/Language/locallang_db.xlf:Active',
         'config' => [
             'type' => 'check',
@@ -23,7 +22,6 @@ $temporaryColumns = array (
         ],
     ],
     'tx_fwauthenticator_secret' => [
-        'exclude' => 0,
         'label' => 'LLL:EXT:fw_authenticator/Resources/Private/Language/locallang_db.xlf:Secret',
         'config' => [
             'type' => 'input',
@@ -40,5 +38,5 @@ $temporaryColumns = array (
 );
 \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addToAllTCAtypes(
     'be_users',
-    '--div--;Authenticator,tx_fwauthenticator_active,tx_fwauthenticator_secret'
+    '--div--;LLL:EXT:fw_authenticator/Resources/Private/Language/locallang_mod.xlf:Authenticator,tx_fwauthenticator_active,tx_fwauthenticator_secret'
 );
