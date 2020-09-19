@@ -9,6 +9,15 @@
 		<f:link.action action="deactivate" class="btn btn-default">Deactivate</f:link.action>
 		<h2>Current secret</h2>
 		<p><b>{user.fwAuthenticatorSecret}</b></p>
+		<h2>Google authenticator</h2>
+		<ul>
+			<li>Install Google Authenticator via the App Store or Android Play</li>
+			<li>Scan the QR-code below, or add the secret manually<br><br>
+
+
+			</li>
+			<li>Done</li>
+		</ul>
 	</f:then>
 	<f:else>
 		<f:link.action action="activate" class="btn btn-default">Activate</f:link.action>
