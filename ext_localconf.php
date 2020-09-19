@@ -21,7 +21,7 @@ defined('TYPO3_MODE') || die();
         'title' => 'Authentication TOTP',
         'description' => 'Authentication TOTP',
 
-        'subtype' => 'getUserBE,authUserBe',
+        'subtype' => 'authUserBe',
 
         'available' => true,
         'priority' => 60,
@@ -32,7 +32,7 @@ defined('TYPO3_MODE') || die();
 
         'className' => \FraJaWeB\FwAuthenticator\Service\TotpAuthenticationService::class
     )
-    );
+);
 
 
 
