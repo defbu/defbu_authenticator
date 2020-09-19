@@ -40,6 +40,8 @@ class AuthenticatorController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionCo
      */
     protected $totpService;
 
+    protected $languageService;
+
     /**
      * Set up the doc header properly here
      *
@@ -55,6 +57,7 @@ class AuthenticatorController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionCo
     public function __construct()
     {
         $this->totpService = \TYPO3\CMS\Core\Utility\GeneralUtility::makeInstanceService('totp');
+        $this->languageSerivce = $this->getLanguageService();
     }
 
     public function indexAction() {
@@ -82,7 +85,7 @@ class AuthenticatorController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionCo
             $beUser->setTxFwauthenticatorSecret($secret);
             $this->beUserRepository->update($beUser);
 
-            $message = $languageService->sL('LLL:EXT:fw_authenticator/Resources/Private/Language/locallang_mod.xlf:Activate.message');
+            $message = $this->languageService->sL('LLL:EXT:fw_authenticator/Resources/Private/Language/locallang_mod.xlf:Activate.message');
             $this->addFlashMessage($message,\TYPO3\CMS\Core\Messaging\FlashMessage::WARNING);
         }
         $this->redirect("index");
@@ -95,7 +98,7 @@ class AuthenticatorController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionCo
             $beUser->setTxFwauthenticatorActive(false);
             $beUser->setTxFwauthenticatorSecret("");
             $this->beUserRepository->update($beUser);
-            $message = $languageService->sL('LLL:EXT:fw_authenticator/Resources/Private/Language/locallang_mod.xlf:Deactivate.message');
+            $message = $this->languageService->sL('LLL:EXT:fw_authenticator/Resources/Private/Language/locallang_mod.xlf:Deactivate.message');
             $this->addFlashMessage($message,\TYPO3\CMS\Core\Messaging\FlashMessage::ERROR);
         }
         $this->redirect("index");
