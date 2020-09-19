@@ -25,13 +25,24 @@ class AuthenticatorController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionCo
      * @var \FraJaWeB\FwAuthenticator\Domain\Repository\BeUserRepository
      * @Extbase\Inject
      */
-    private $beUserRepository;
+    protected $beUserRepository;
+
+    /**
+     *
+     * @var \FraJaWeB\FwAuthenticator\Service\TotpService
+     * @Extbase\Inject
+     */
+    protected $totpService;
+
+
+
 
     public function indexAction() {
         $uid = $GLOBALS['BE_USER']->user["uid"];
         $beUser = $this->beUserRepository->findByUid($uid);
         if (isset($beUser)) {
-            echo $beUser->getUid();
+            $this->view->assign('user',$beUser);
+            $this->view->assign('site',$GLOBALS['TYPO3_CONF_VARS']['SYS']['sitename']);
         }
     }
 
