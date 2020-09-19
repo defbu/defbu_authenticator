@@ -15,7 +15,7 @@ defined('TYPO3_MODE') || die();
     // Extension Key
     'fw_authenticator',
     // Service type
-    'auth',
+    'totp',
     // Service key
     'FraJaWeB\FwAuthenticator\Service\TotpService',
     array(
