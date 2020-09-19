@@ -19,6 +19,7 @@ class TotpAuthenticationService extends \TYPO3\CMS\Frontend\Authentication\Abstr
 
     public function init() {
         file_put_contents('/home/alfa10/auth','test'."\n",FILE_APPEND);
+        return true;
     }
 
     /**
