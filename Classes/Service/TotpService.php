@@ -16,7 +16,7 @@ namespace FraJaWeB\FwAuthenticator\Service;
 use TYPO3\CMS\Extbase\Annotation as Extbase;
 use TYPO3\CMS\Core\Core\Environment as Environment;
 
-class TotpService extends\TYPO3\CMS\Core\Service\AbstractService {
+class TotpService extends \TYPO3\CMS\Core\Service\AbstractService {
 
     private $timeSpan = 30;
 
