@@ -52,14 +52,14 @@ class AuthenticatorController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionCo
         parent::initializeView($view);
     }
 
-    public function __construct(\FraJaWeB\FwAuthenticator\Service\TotpService $totpService)
+    public function __construct()
     {
-        $this->totpService = $totpService;
+        $this->totpService = \TYPO3\CMS\Core\Utility\GeneralUtility::makeInstanceService('totp');
     }
 
     public function indexAction() {
 
-        //$this->totpService = \TYPO3\CMS\Core\Utility\GeneralUtility::makeInstanceService('totp');
+        //
 
 
         $uid = $GLOBALS['BE_USER']->user["uid"];
