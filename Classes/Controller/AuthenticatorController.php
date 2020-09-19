@@ -43,6 +43,7 @@ class AuthenticatorController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionCo
         if (isset($beUser)) {
             $this->view->assign('user',$beUser);
             $this->view->assign('site',$GLOBALS['TYPO3_CONF_VARS']['SYS']['sitename']);
+            $this->view->assign('url',$_SERVER[HTTP_HOST]);
         }
     }
 
