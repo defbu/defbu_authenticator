@@ -23,8 +23,7 @@ defined('TYPO3_MODE') || die();
     ]
     );
 
-$GLOBALS['TYPO3_USER_SETTINGS']['columns']['fw_authenticator_active'] = [
-        'exclude' => 1,
+$GLOBALS['TYPO3_USER_SETTINGS']['columns']['tx_fwauthenticator_active'] = [
         'label' => 'LLL:EXT:fw_authenticator/Resources/Private/Language/locallang_db.xlf:Active',
         'config' => [
             'type' => 'check',
@@ -32,8 +31,7 @@ $GLOBALS['TYPO3_USER_SETTINGS']['columns']['fw_authenticator_active'] = [
             'table' => 'be_users'
         ],
     ];
-$GLOBALS['TYPO3_USER_SETTINGS']['columns']['fw_authenticator_secret'] = [
-        'exclude' => 0,
+$GLOBALS['TYPO3_USER_SETTINGS']['columns']['tx_fwauthenticator_secret'] = [
         'label' => 'LLL:EXT:fw_authenticator/Resources/Private/Language/locallang_db.xlf:Secret',
         'config' => [
             'type' => 'input',
@@ -44,6 +42,5 @@ $GLOBALS['TYPO3_USER_SETTINGS']['columns']['fw_authenticator_secret'] = [
     ];
 
 \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addFieldsToUserSettings(
-    'LLL:EXT:fw_authenticator/Resources/Private/Language/locallang_db.xlf:Authenticator,fw_authenticator_active,fw_authenticator_secret',
-    'after:email'
+    'LLL:EXT:fw_authenticator/Resources/Private/Language/locallang_db.xlf:Authenticator,tx_fwauthenticator_active,tx_fwauthenticator_secret'
 );
