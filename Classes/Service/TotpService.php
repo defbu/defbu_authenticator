@@ -122,7 +122,7 @@ class TotpService extends\TYPO3\CMS\Core\Service\AbstractService {
      * @param binary $hash
      * @return integer
      */
-    private static function oathTruncate($hash)
+    private function oathTruncate($hash)
     {
         $offset = ord($hash[19]) & 0xf;
 
@@ -136,13 +136,13 @@ class TotpService extends\TYPO3\CMS\Core\Service\AbstractService {
 
     /**
      *
-     * @param string $b32Seed
+     * @param string $secret
      * @param string $key
      * @param integer $window
      * @param boolean $useTimeStamp
      * @return boolean
      */
-    public static function verifyKey($b32Seed, $key, $window = 4, $useTimeStamp = true) {
+    public function verifyKey($secret, $key, $window = 4, $useTimeStamp = true) {
 
         $timeStamp = $this->getTimestamp();
 
@@ -150,13 +150,17 @@ class TotpService extends\TYPO3\CMS\Core\Service\AbstractService {
             $timeStamp = (int)$useTimeStamp;
         }
 
-        $binarySeed = base32Decode($b32seed);
+        $binarySeed = base32Decode($secret);
 
-        for ($ts = $timeStamp - $window; $tx <= $timeStamp + $window; $ts++) {
+        for ($ts = $timeStamp - $window; $ts <= $timeStamp + $window; $ts++) {
             if ($this->oathHotp($binarySeed, $ts) == $key) {
                 return true;
             }
         }
+    }
+
+    public function getUrl($username,$site,$secret) {
+        return 'otpauth://totp/'.url_encode($username).'@'.url_encode($siteName).'?secret='.$secret;
     }
 
     public function init() {
