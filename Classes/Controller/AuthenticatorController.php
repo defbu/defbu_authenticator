@@ -15,10 +15,17 @@ namespace FraJaWeB\FwAuthenticator\Controller;
 
 use TYPO3\CMS\Extbase\Annotation as Extbase;
 use TYPO3\CMS\Core\Core\Environment as Environment;
+use TYPO3\CMS\Extbase\Mvw\View\ViewInterface as ViewInterface;
 
 class AuthenticatorController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionController {
 
 
+    /**
+     * Backend Template Container
+     *
+     * @var string
+     */
+    protected $defaultViewObjectName = \TYPO3\CMS\Backend\View\BackendTemplateView::class;
 
     /**
      *
@@ -34,8 +41,27 @@ class AuthenticatorController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionCo
      */
     protected $totpService;
 
-
-
+    /**
+     * Set up the doc header properly here
+     *
+     * @param ViewInterface $view
+     * @return void
+     */
+    protected function initializeView(ViewInterface $view)
+    {
+        /** @var BackendTemplateView $view */
+        parent::initializeView($view);
+        if ($this->actionMethodName == 'indexAction'
+            || $this->actionMethodName == 'activateAction'
+            || $this->actionMethodName == 'deactivateAction') {
+            $this->generateMenu();
+            $this->registerDocheaderButtons();
+            $this->view->getModuleTemplate()->setFlashMessageQueue($this->controllerContext->getFlashMessageQueue());
+        }
+        if ($view instanceof BackendTemplateView) {
+            $view->getModuleTemplate()->getPageRenderer()->loadRequireJsModule('TYPO3/CMS/Backend/Modal');
+        }
+    }
 
     public function indexAction() {
         $uid = $GLOBALS['BE_USER']->user["uid"];
