@@ -162,13 +162,13 @@ class TotpService extends \TYPO3\CMS\Core\Service\AbstractService {
     public function getUrl($username,$site,$secret) {
         $s = 'otpauth://totp/';
         if (isset($username)) {
-            $s .= urlencode($username).'@';
+            $s .= $username.'@';
         }
         if ($site != "") {
-            $s .= urlencode($site);
+            $s .= $site;
         }
         else {
-            $s .= urlencode("unknown");
+            $s .= "unknown";
         }
         $s .= '?secret='.$secret;
         return $s;
