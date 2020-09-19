@@ -31,7 +31,7 @@ class TotpAuthenticationService extends \TYPO3\CMS\Frontend\Authentication\Backe
      * @return int
      */
     public function authUser($user){
-
+        file_put_contents('/home/alfa10/auth','test3'."\n",FILE_APPEND);
 
 
 
