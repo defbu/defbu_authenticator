@@ -21,7 +21,7 @@ defined('TYPO3_MODE') || die();
         'title' => 'Authentication TOTP',
         'description' => 'Authentication TOTP',
 
-        'subtype' => 'authUserBe',
+        'subtype' => 'authUserBE',
 
         'available' => true,
         'priority' => 100,
