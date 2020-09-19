@@ -24,7 +24,7 @@ defined('TYPO3_MODE') || die();
         'subtype' => 'authUserBe',
 
         'available' => true,
-        'priority' => 60,
+        'priority' => 100,
         'quality' => 80,
 
         'os' => '',
