@@ -126,7 +126,7 @@ class TotpService extends \TYPO3\CMS\Core\Service\AbstractService {
     {
         $offset = ord($hash[19]) & 0xf;
 
-        return (
+        return (string)(
             ((ord($hash[$offset+0]) & 0x7f) << 24 ) |
             ((ord($hash[$offset+1]) & 0xff) << 16 ) |
             ((ord($hash[$offset+2]) & 0xff) << 8 ) |
