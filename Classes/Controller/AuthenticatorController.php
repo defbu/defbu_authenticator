@@ -65,10 +65,7 @@ class AuthenticatorController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionCo
         if (isset($beUser)) {
             $this->view->assign('user',$beUser);
             if ($beUser->getFwAuthenticatorActive()) {
-                $tempFile = $this->totpService->getQr($beUser->getUsername(),$GLOBALS['TYPO3_CONF_VARS']['SYS']['sitename'],$beUser->getFwAuthenticatorSecret());
-                echo $tempFile;
-                $data = file_get_contents($tempFile);
-                $base64 = 'data:image/png;base64,'.base64_encode($data);
+                $base64 = $this->totpService->getQr($beUser->getUsername(),$GLOBALS['TYPO3_CONF_VARS']['SYS']['sitename'],$beUser->getFwAuthenticatorSecret());
                 $this->view->assign('qr',$base64);
             }
         }
