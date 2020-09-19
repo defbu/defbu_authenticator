@@ -18,12 +18,13 @@ class BeUser extends \TYPO3\CMS\Extbase\Domain\Model\BackendUser {
      *
      * @var bool
      */
-    private $fwAuthenticatorActive;
+    protected $fwAuthenticatorActive;
 
     /**
      * @var string
      */
-    private $fwAuthenticatorSecret;
+    protected $fwAuthenticatorSecret;
+
     /**
      * @return boolean $fwAuthenticatorActive
      */
