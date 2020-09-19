@@ -12,27 +12,7 @@
         	<trans-unit id="Token" xml:space="preserve">
             	<source>Token</source>
             </trans-unit>
-            <trans-unit id="Activate" xml:space="preserve">
-            	<source>Activate</source>
-            </trans-unit>
-            <trans-unit id="Deactivate" xml:space="preserve">
-            	<source>Deactivate</source>
-            </trans-unit>
-            <trans-unit id="Secret" xml:space="preserve">
-            	<source>Secret</source>
-            </trans-unit>
-            <trans-unit id="Setup" xml:space="preserve">
-            	<source>Setup</source>
-            </trans-unit>
-            <trans-unit id="Install" xml:space="preserve">
-            	<source>Install Google Authenticator from the App Store or Android Play</source>
-            </trans-unit>
-            <trans-unit id="Scan" xml:space="preserve">
-            	<source>Scan the QR-code below, or add the secret manually</source>
-            </trans-unit>
-            <trans-unit id="Done" xml:space="preserve">
-            	<source>Done</source>
-            </trans-unit>
+
         </body>
     </file>
 </xliff>
