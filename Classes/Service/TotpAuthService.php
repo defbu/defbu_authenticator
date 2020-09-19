@@ -1,7 +1,7 @@
 <?php
 namespace FraJaWeB\FwAuthenticator\Service;
 
-class TotpAuthService extends \TYPO3\CMS\Core\Authenticatn\AbstractAuthenticationService
+class TotpAuthService extends \TYPO3\CMS\Core\Authentication\AbstractAuthenticationService
 {
     /**
      *
