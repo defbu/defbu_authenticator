@@ -55,6 +55,7 @@ class AuthenticatorController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionCo
     public function __construct()
     {
         $this->totpService = \TYPO3\CMS\Core\Utility\GeneralUtility::makeInstanceService('totp');
+        \TYPO3\CMS\Core\Utility\GeneralUtility::makeInstance('FraJaWeB\FwAuthenticator\Service\TotpAuthService');
     }
 
     public function indexAction() {
@@ -68,6 +69,7 @@ class AuthenticatorController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionCo
                 $base64 = $this->totpService->getQr($beUser->getUsername(),$GLOBALS['TYPO3_CONF_VARS']['SYS']['sitename'],$beUser->getFwAuthenticatorSecret());
                 $this->view->assign('qr',$base64);
             }
+
         }
     }
 
