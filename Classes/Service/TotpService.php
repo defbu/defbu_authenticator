@@ -173,4 +173,13 @@ class TotpService extends \TYPO3\CMS\Core\Service\AbstractService {
         $s .= '?secret='.$secret;
         return $s;
     }
+
+    public function getQr($username,$site,$secret) {
+        $url = $this->getUrl($username,$site,$secret);
+        $typo3conf = Environment::getConfigPath();
+        require_once($typo3conf.'/ext/fw_authenticator/Library/phpqrcode/phpqrcode.php');
+        $tempFile = $this->tempFile();
+        QRcode::png($url,$tempFile);
+        return $tempFile
+    }
 }

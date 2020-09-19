@@ -65,11 +65,8 @@ class AuthenticatorController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionCo
         if (isset($beUser)) {
             $this->view->assign('user',$beUser);
             if ($beUser->getFwAuthenticatorActive()) {
-                $url = $this->totpService->getUrl($beUser->getUsername(),$GLOBALS['TYPO3_CONF_VARS']['SYS']['sitename'],$beUser->getFwAuthenticatorSecret());
-                $typo3conf = Environment::getConfigPath();
-                require_once($typo3conf.'/ext/fw_authenticator/Library/phpqrcode/phpqrcode.php');
-                $tempFile = $this->tempFile();
-                $qr = QRcode::png($url,$tempFile);
+                $tempFile = $this->totpService->getQr($beUser->getUsername(),$GLOBALS['TYPO3_CONF_VARS']['SYS']['sitename'],$beUser->getFwAuthenticatorSecret());
+
 
             }
         }
