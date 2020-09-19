@@ -8,7 +8,7 @@
  */
 defined('TYPO3_MODE') || die();
 
-$GLOBALS['TBE_STYLES']['fwauthenticator'] = '../typo3conf/ext/sf_yubikey/Resources/Public/Css/fw_authenticator.css';
+$GLOBALS['TBE_STYLES']['fwauthenticator'] = '../typo3conf/ext/fw_authenticator/Resources/Public/Css/fw_authenticator.css';
 
 \TYPO3\CMS\Extbase\Utility\ExtensionUtility::registerModule(
     'FraJaWeB.FwAuthenticator',

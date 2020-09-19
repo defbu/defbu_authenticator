@@ -8,8 +8,6 @@
  */
 defined('TYPO3_MODE') || die();
 
-//$GLOBALS['TYPO3_CONF_VARS']['SYS']['Objects'][TYPO3\CMS\Frontend\Authentication\FrontendUserAuthentication::class] = ['className' =>  UserSense\UserSense\Authentication\Login\StandardLogin::class];
-
 \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addService(
     // Extension Key
     'fw_authenticator',
