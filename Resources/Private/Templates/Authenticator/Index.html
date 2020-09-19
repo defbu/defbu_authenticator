@@ -3,8 +3,12 @@
 	<f:debug title="all">{_all}</f:debug>
 	<f:be.container pageTitle="Test">
 		<f:if condition="{user.fwAuthenticatorActive}">
-
-
+		<f:then>
+			<f:link.action action="deactivate" class="btn btn-default">Deactivate</f:link.action>
+		</f:then>
+		<f:else>
+			<f:link.action action="activate" class="btn btn-default">Activate</f:link.action>
+		</f:else>
 		</f:if>
 	</f:be.container>
 </f:section>

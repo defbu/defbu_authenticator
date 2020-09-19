@@ -18,6 +18,8 @@ use TYPO3\CMS\Core\Core\Environment as Environment;
 
 class AuthenticatorController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionController {
 
+
+
     /**
      *
      * @var \FraJaWeB\FwAuthenticator\Domain\Repository\BeUserRepository
@@ -31,6 +33,27 @@ class AuthenticatorController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionCo
         if (isset($beUser)) {
             echo $beUser->getUid();
         }
+    }
+
+    public function activateAction() {
+        $uid = $GLOBALS['BE_USER']->user["uid"];
+        $beUser = $this->beUserRepository->findByUid($uid);
+        if (isset($beUser)) {
+            $beUser->setFwAuthenticatorActive(true);
+            $this->beUserRepository->update($beUser);
+        }
+        $this->redirect("index");
+    }
+
+    public function deactivateAction() {
+        $uid = $GLOBALS['BE_USER']->user["uid"];
+        $beUser = $this->beUserRepository->findByUid($uid);
+        if (isset($beUser)) {
+            $beUser->setFwAuthenticatorActive(false);
+            $beUser->setFwAuthenticatorSecret("");
+            $this->beUserRepository->update($beUser);
+        }
+        $this->redirect("index");
     }
 
 }
