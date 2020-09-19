@@ -162,14 +162,4 @@ class TotpService extends\TYPO3\CMS\Core\Service\AbstractService {
     public function getUrl($username,$site,$secret) {
         return 'otpauth://totp/'.url_encode($username).'@'.url_encode($siteName).'?secret='.$secret;
     }
-
-    public function init() {
-        echo "test";
-        return true;
-    }
-
-    public function reset() {
-
-    }
-
 }
