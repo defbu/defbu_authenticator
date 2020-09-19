@@ -74,14 +74,13 @@ class AuthenticatorController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionCo
     }
 
     public function activateAction() {
-        //$this->totpService = \TYPO3\CMS\Core\Utility\GeneralUtility::makeInstanceService('totp');
-
         $uid = $GLOBALS['BE_USER']->user["uid"];
         $beUser = $this->beUserRepository->findByUid($uid);
         if (isset($beUser)) {
             $beUser->setFwAuthenticatorActive(true);
             $this->beUserRepository->update($beUser);
             $secret = $this->totpService->generateSecretKey();
+            echo get_class($beUser);
             $this->beUserRepository->update($secret);
             $this->addFlashMessage('Link Google Authenticator before logging out!','Authenticator activated',\TYPO3\CMS\Core\Messaging\FlashMessage::WARNING);
         }
