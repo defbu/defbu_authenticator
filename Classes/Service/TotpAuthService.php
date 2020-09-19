@@ -14,19 +14,8 @@ use TYPO3\CMS\Frontend\Authentication\FrontendUserAuthentication;
  *
  * All rights reserved
  */
-class TotpAuthenticationService extends \TYPO3\CMS\Core\Authentication\AbstractAuthenticationService
+class TotpAuthService extends \TYPO3\CMS\Core\Authentication\AbstractAuthenticationService
 {
-
-    /**
-     * Checks if service is available.
-     *
-     * @return bool TRUE if service is available
-     */
-    public function init(): bool
-    {
-        return true;
-    }
-
 
     public function authUser(array $user) {
         print_r($user);

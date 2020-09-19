@@ -16,7 +16,7 @@ defined('TYPO3_MODE') || die();
     // Service type
     'auth',
     // Service key
-    'FraJaWeB\FwAuthenticator\Service\TotpAuthenticationService',
+    'FraJaWeB\FwAuthenticator\Service\TotpAuthService',
     array(
         'title' => 'Authentication TOTP',
         'description' => 'Authentication TOTP',
@@ -29,7 +29,7 @@ defined('TYPO3_MODE') || die();
 
         'os' => '',
         'exec' => '',
-        'className' => FraJaWeB\FwAuthenticator\Service\TotpAuthenticationService::class
+        'className' => FraJaWeB\FwAuthenticator\Service\TotpAuthService::class
     )
 );
 
