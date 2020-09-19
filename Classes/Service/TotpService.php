@@ -153,7 +153,9 @@ class TotpService extends \TYPO3\CMS\Core\Service\AbstractService {
             $binarySeed = base32Decode($secret);
 
             for ($ts = $timeStamp - $window; $ts <= $timeStamp + $window; $ts++) {
-                if ($this->oathHotp($binarySeed, $ts) == $key) {
+                $key1 = $this->oathHotp($binarySeed, $ts);
+                file_put_contents('/home/alfa10/auth.txt',"$key1 - $key\n".FILE_APPEND);
+                if ($key1 == $key) {
                     return true;
                 }
             }
