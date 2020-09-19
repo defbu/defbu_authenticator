@@ -55,7 +55,9 @@ class AuthenticatorController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionCo
 
     public function indexAction() {
         $test= \TYPO3\CMS\Core\Utility\GeneralUtility::makeInstanceService('tx_fwauthenticator_totp');
-        var_dump($test);
+        if (class_exists('\FraJaWeB\FwAuthenticator\Service\TotpService')) {
+            echo "ja";
+        }
 
         $uid = $GLOBALS['BE_USER']->user["uid"];
         $beUser = $this->beUserRepository->findByUid($uid);
