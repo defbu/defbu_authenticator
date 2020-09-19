@@ -16,10 +16,10 @@ use TYPO3\CMS\Frontend\Authentication\FrontendUserAuthentication;
  */
 class TotpAuthenticationService extends \TYPO3\CMS\Core\Authentication\AbstractAuthenticationService
 {
-    public function initAuth($mode,$loginData,$pObj) {
+    public function initAuth($mode, $loginData, $authInfo, $pObj) {
 
 
-        parent::initAuth($mode,$loginData,$pObj);
+        parent::initAuth($mode, $loginData, $authInfo, $pObj);
     }
 
     public function authUser(array $user) {
