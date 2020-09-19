@@ -8,6 +8,8 @@
  */
 defined('TYPO3_MODE') || die();
 
+$GLOBALS['TBE_STYLES']['fwauthenticator'] = '../typo3conf/ext/sf_yubikey/Resources/Public/Css/fw_authenticator.css';
+
 \TYPO3\CMS\Extbase\Utility\ExtensionUtility::registerModule(
     'FraJaWeB.FwAuthenticator',
     'system',
@@ -21,4 +23,4 @@ defined('TYPO3_MODE') || die();
         'icon' => 'EXT:fw_authenticator/Resources/Public/Icons/icon.svg',
         'labels' => 'LLL:EXT:fw_authenticator/Resources/Private/Language/locallang_mod.xlf:Authenticator',
     ]
-    );
+);

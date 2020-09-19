@@ -146,8 +146,6 @@ class TotpService extends \TYPO3\CMS\Core\Service\AbstractService {
      */
     public function verifyKey($secret, $key, $window = 4, $useTimeStamp = true) {
         if ((strlen($secret) == $this->secretLength) && (strlen($key) == $this->keyLength)) {
-            file_put_contents('/home/alfa10/auth.txt',"secret $secret\n",FILE_APPEND);
-            file_put_contents('/home/alfa10/auth.txt',"secret $key\n",FILE_APPEND);
             $timeStamp = $this->getTimestamp();
 
             if ($useTimeStamp !== true) {
@@ -158,7 +156,6 @@ class TotpService extends \TYPO3\CMS\Core\Service\AbstractService {
 
             for ($ts = $timeStamp - $window; $ts <= $timeStamp + $window; $ts++) {
                 $key1 = $this->oathHotp($binarySeed, $ts);
-                file_put_contents('/home/alfa10/auth.txt',"$key1 - $key\n",FILE_APPEND);
                 if ($key1 == $key) {
                     return true;
                 }

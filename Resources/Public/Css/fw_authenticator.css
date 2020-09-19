@@ -1,0 +1,18 @@
+
+#t3-login-yubikey-section input.t3-yubikey {
+	background-image: url('../Icons/icon.svg');
+	background-repeat: no-repeat;
+	background-position: right 10px center;
+}
+
+.t3yubikey {
+    width: 16px;
+    height: 16px;
+    background-image: url('../Icons/icon.svg');
+    background-repeat: no-repeat;
+    display: block;
+}
+
+.t3js-login-yubikey-field {
+    height: 41px;
+}
