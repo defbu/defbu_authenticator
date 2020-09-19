@@ -15,12 +15,6 @@ class TotpAuthService extends \TYPO3\CMS\Core\Authentication\AbstractAuthenticat
         if (is_object($this->totpService)) {
             $available = true;
         }
-        if ($available) {
-            die('ja');
-        }
-        else {
-            die('nee');
-        }
         return $available;
     }
 
