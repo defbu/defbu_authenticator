@@ -6,6 +6,9 @@
             <authorEmail>info@usersense.nl</authorEmail>
         </header>
         <body>
+        	<trans-unit id="Authenticator" xml:space="preserve">
+            	<source>Authenticator</source>
+            </trans-unit>
         	<trans-unit id="Active" xml:space="preserve">
             	<source>Authenticator Active</source>
             </trans-unit>
