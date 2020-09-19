@@ -51,19 +51,6 @@ class AuthenticatorController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionCo
     {
         /** @var BackendTemplateView $view */
         parent::initializeView($view);
-        /*
-        if ($this->actionMethodName == 'indexAction'
-            || $this->actionMethodName == 'activateAction'
-            || $this->actionMethodName == 'deactivateAction') {
-            //$this->generateMenu();
-            //$this->registerDocheaderButtons();
-            //$this->view->getModuleTemplate()->setFlashMessageQueue($this->controllerContext->getFlashMessageQueue());
-        }
-
-        if ($view instanceof BackendTemplateView) {
-            $view->getModuleTemplate()->getPageRenderer()->loadRequireJsModule('TYPO3/CMS/Backend/Modal');
-        }
-        */
     }
 
     public function indexAction() {
@@ -82,6 +69,15 @@ class AuthenticatorController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionCo
         if (isset($beUser)) {
             $beUser->setFwAuthenticatorActive(true);
             $this->beUserRepository->update($beUser);
+
+            $message = \TYPO3\CMS\Core\Utility\GeneralUtility::makeInstance(\TYPO3\CMS\Core\Messaging\FlashMessage::class,
+                'Link Google Authenticator before logging out!',
+                'Authenticator activated',
+                \TYPO3\CMS\Core\Messaging\FlashMessage::WARNING
+                );
+            $flashMessageService = \TYPO3\CMS\Core\Utility\GeneralUtility::makeInstance(\TYPO3\CMS\Core\Messaging\FlashMessageService::class);
+            $messageQueue = $flashMessageService->getMessageQueueByIdentifier();
+            $messageQueue->addMessage($message);
         }
         $this->redirect("index");
     }
