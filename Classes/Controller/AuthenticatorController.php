@@ -80,7 +80,7 @@ class AuthenticatorController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionCo
             $beUser->setFwAuthenticatorActive(true);
             $this->beUserRepository->update($beUser);
             $secret = $this->totpService->generateSecretKey();
-            echo $secret;
+            die($secret);
             $beUser->setFwAuthenticatorSecret($secret);
             $this->beUserRepository->update($beUser);
             $this->addFlashMessage('Link Google Authenticator before logging out!','Authenticator activated',\TYPO3\CMS\Core\Messaging\FlashMessage::WARNING);
