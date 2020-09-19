@@ -91,7 +91,7 @@ class TotpService extends \TYPO3\CMS\Core\Service\AbstractService {
         $chars 	= array_merge(range("2","7"),range("A","Z"));
         $s = "";
         for ($i = 0; $i < $this->keyLength; $i++) {
-            $s .= $b32[array_rand($chars)];
+            $s .= $lut[array_rand($chars)];
         }
         return $s;
     }
