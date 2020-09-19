@@ -30,9 +30,11 @@ defined('TYPO3_MODE') || die();
         'os' => '',
         'exec' => '',
 
-        'className' => \FraJaWeB\FwAuthenticator\Service\TotpAuthenticationService::class
+        'className' => FraJaWeB\FwAuthenticator\Service\TotpAuthenticationService::class
     )
 );
+
+$GLOBALS['TYPO3_CONF_VARS']['EXTCONF']['backend']['loginProviders'][1600536448]['provider'] = FraJaWeB\FwAuthenticator\Service\TotpAuthenticationService::class;
 
 
 
@@ -56,6 +58,6 @@ defined('TYPO3_MODE') || die();
         'os' => '',
         'exec' => '',
 
-        'className' => \FraJaWeB\FwAuthenticator\Service\TotpService::class
+        'className' => FraJaWeB\FwAuthenticator\Service\TotpService::class
     )
 );
