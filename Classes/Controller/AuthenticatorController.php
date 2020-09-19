@@ -54,7 +54,7 @@ class AuthenticatorController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionCo
 
     public function indexAction() {
         print_r($GLOBALS['T3_SERVICES']);
-        $this->totpService = \TYPO3\CMS\Core\Utility\GeneralUtility::makeInstanceService('FraJaWeB\FwAuthenticator\Service\TotpService');
+        $this->totpService = \TYPO3\CMS\Core\Utility\GeneralUtility::makeInstanceService('totp');
         if (is_object( $this->totpService)) {
             echo "ja";
         }
