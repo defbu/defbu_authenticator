@@ -52,12 +52,15 @@ class AuthenticatorController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionCo
         parent::initializeView($view);
     }
 
+    public function __construct(\FraJaWeB\FwAuthenticator\Service\TotpService $totpService)
+    {
+        $this->totpService = $totpService;
+    }
+
     public function indexAction() {
-        print_r($GLOBALS['T3_SERVICES']);
-        $this->totpService = \TYPO3\CMS\Core\Utility\GeneralUtility::makeInstanceService('totp');
-        if (is_object( $this->totpService)) {
-            echo "ja";
-        }
+
+        //$this->totpService = \TYPO3\CMS\Core\Utility\GeneralUtility::makeInstanceService('totp');
+
 
         $uid = $GLOBALS['BE_USER']->user["uid"];
         $beUser = $this->beUserRepository->findByUid($uid);
@@ -71,7 +74,7 @@ class AuthenticatorController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionCo
     }
 
     public function activateAction() {
-        $this->totpService = \TYPO3\CMS\Core\Utility\GeneralUtility::makeInstanceService('tx_fwauthenticator_totp');
+        //$this->totpService = \TYPO3\CMS\Core\Utility\GeneralUtility::makeInstanceService('totp');
 
         $uid = $GLOBALS['BE_USER']->user["uid"];
         $beUser = $this->beUserRepository->findByUid($uid);
