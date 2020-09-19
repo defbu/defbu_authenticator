@@ -164,7 +164,12 @@ class TotpService extends \TYPO3\CMS\Core\Service\AbstractService {
         if (isset($user)) {
             $s .= urlencode($username).'@';
         }
-        $s .= urlencode($siteName);
+        if ($site == "") {
+            $s .= urlencode($site);
+        }
+        else {
+            $s .= urlencode("unknown");
+        }
         $s .= '?secret='.$secret;
         return $s;
     }
