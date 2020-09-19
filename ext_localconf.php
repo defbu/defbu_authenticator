@@ -18,8 +18,8 @@ defined('TYPO3_MODE') || die();
     // Service key
     'FraJaWeB\FwAuthenticator\Service\TotpAuthService',
     array(
-        'title' => 'Authentication TOTP',
-        'description' => 'Authentication TOTP',
+        'title' => 'LLL:EXT:fw_authenticator/Resources/Private/Language/locallang_mod.xlf:TotpAuthService.title',
+        'description' => 'LLL:EXT:fw_authenticator/Resources/Private/Language/locallang_mod.xlf:TotpAuthService.description',
 
         'subtype' => 'authUserBE',
 
@@ -44,8 +44,8 @@ $GLOBALS['TYPO3_CONF_VARS']['EXTCONF']['backend']['loginProviders'][1433416747][
     // Service key
     'FraJaWeB\FwAuthenticator\Service\TotpService',
     array(
-        'title' => 'Authenticator TOTP',
-        'description' => 'Authenticator TOTP',
+        'title' => 'LLL:EXT:fw_authenticator/Resources/Private/Language/locallang_mod.xlf:TotpService.title',
+        'description' => 'LLL:EXT:fw_authenticator/Resources/Private/Language/locallang_mod.xlf:TotpService.description',
 
         'subtype' => '',
 
