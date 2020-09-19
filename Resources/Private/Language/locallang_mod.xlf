@@ -30,18 +30,6 @@
             <trans-unit id="Done" xml:space="preserve">
             	<source>Done</source>
             </trans-unit>
-            <trans-unit id="TotpService.title" xml:space="preserve">
-            	<source>Time-based One-Time Password Service</source>
-            </trans-unit>
-            <trans-unit id="TotpService.description" xml:space="preserve">
-            	<source>Thsi service provides support for Time-based One-Time Passwords</source>
-            </trans-unit>
-            <trans-unit id="TotpAuthService.title" xml:space="preserve">
-            	<source>Time-based One-Time Password authentication service</source>
-            </trans-unit>
-            <trans-unit id="TotpAuthService.description" xml:space="preserve">
-            	<source>This authentication service adds support for authentication based on Time-based One-Time Passwords</source>
-            </trans-unit>
             <trans-unit id="Activate.message" xml:space="preserve">
             	<source>Link Google Authenticator before logging out!','Authenticator activated</source>
             </trans-unit>

@@ -18,8 +18,8 @@ defined('TYPO3_MODE') || die();
     // Service key
     'FraJaWeB\FwAuthenticator\Service\TotpAuthService',
     array(
-        'title' => 'LLL:EXT:fw_authenticator/Resources/Private/Language/locallang_mod.xlf:TotpAuthService.title',
-        'description' => 'LLL:EXT:fw_authenticator/Resources/Private/Language/locallang_mod.xlf:TotpAuthService.description',
+        'title' => 'Time-based One-Time Password authentication service',
+        'description' => 'This authentication service adds support for authentication based on Time-based One-Time Passwords',
 
         'subtype' => 'authUserBE',
 
@@ -44,8 +44,8 @@ $GLOBALS['TYPO3_CONF_VARS']['EXTCONF']['backend']['loginProviders'][1433416747][
     // Service key
     'FraJaWeB\FwAuthenticator\Service\TotpService',
     array(
-        'title' => 'LLL:EXT:fw_authenticator/Resources/Private/Language/locallang_mod.xlf:TotpService.title',
-        'description' => 'LLL:EXT:fw_authenticator/Resources/Private/Language/locallang_mod.xlf:TotpService.description',
+        'title' => 'Time-based One-Time Password Service',
+        'description' => 'This service provides support for Time-based One-Time Passwords',
 
         'subtype' => '',
 
