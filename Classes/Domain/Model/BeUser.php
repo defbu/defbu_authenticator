@@ -14,5 +14,48 @@ namespace FraJaWeB\FwAuthenticator\Domain\Model;
  */
 class BeUser extends \TYPO3\CMS\Extbase\Domain\Model\BackendUser {
 
+    /**
+     *
+     * @var bool
+     */
+    private $fwAuthenticatorActive;
+
+    /**
+     * @var string
+     */
+    private $fwAuthenticatorSecret;
+    /**
+     * @return boolean $fwAuthenticatorActive
+     */
+    public function getFwAuthenticatorActive()
+    {
+        return $this->fwAuthenticatorActive;
+    }
+
+    /**
+     * @return string $fwAuthenticatorSecret
+     */
+    public function getFwAuthenticatorSecret()
+    {
+        return $this->fwAuthenticatorSecret;
+    }
+
+    /**
+     * @param boolean $fwAuthenticatorActive
+     */
+    public function setFwAuthenticatorActive($fwAuthenticatorActive)
+    {
+        $this->fwAuthenticatorActive = $fwAuthenticatorActive;
+    }
+
+    /**
+     * @param string $fwAuthenticatorSecret
+     */
+    public function setFwAuthenticatorSecret($fwAuthenticatorSecret)
+    {
+        $this->fwAuthenticatorSecret = $fwAuthenticatorSecret;
+    }
+
+
 
 }
