@@ -9,7 +9,7 @@ class TotpAuthService extends \TYPO3\CMS\Core\Authentication\AbstractAuthenticat
      */
     private $totpService = null;
 
-    public function init() {
+    public function init() : bool {
         $available = false;
         $this->totpService = \TYPO3\CMS\Core\Utility\GeneralUtility::makeInstanceService('totp');
         if (is_object($this->totpService)) {
@@ -24,7 +24,7 @@ class TotpAuthService extends \TYPO3\CMS\Core\Authentication\AbstractAuthenticat
         return $available;
     }
 
-    public function authUser($user) {
+    public function authUser(array $user) {
         return -1;
     }
 
