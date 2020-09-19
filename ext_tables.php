@@ -9,9 +9,9 @@
 defined('TYPO3_MODE') || die();
 
 
-$relativePath = \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::extRelPath('FraJaWeB.FwAuthenticator');
+$typo3conf = \TYPO3\CMS\Core\Core\Environment::getConfigPath();
 echo $relativePath;
-$GLOBALS['TBE_STYLES']['stylesheet2'] = 'EXT:fw_authenticator/Resources/Public/Css/fw_authenticator.css';
+$GLOBALS['TBE_STYLES']['stylesheet2'] = $typo3conf.'/ext/fw_authenticator/Resources/Public/Css/fw_authenticator.css';
 
 \TYPO3\CMS\Extbase\Utility\ExtensionUtility::registerModule(
     'FraJaWeB.FwAuthenticator',
