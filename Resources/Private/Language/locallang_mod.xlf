@@ -46,7 +46,7 @@
             	<source>Link Google Authenticator before logging out!','Authenticator activated</source>
             </trans-unit>
             <trans-unit id="Deactivate.message" xml:space="preserve">
-            	<source>Authenticator disabled!</source>
+            	<source>Authenticator disabled! Insecure!</source>
             </trans-unit>
 
 
