@@ -164,7 +164,7 @@ class TotpService extends\TYPO3\CMS\Core\Service\AbstractService {
     }
 
     public function init() {
-
+        return true;
     }
 
     public function reset() {
