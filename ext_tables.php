@@ -18,8 +18,8 @@ defined('TYPO3_MODE') || die();
     ],
     [
         'access' => 'user',
-        //'icon' => 'EXT:fw_authenticator/Resources/Public/Icons/module-beuser.svg',
-        'labels' => 'LLL:EXT:fw_authenticator/Resources/Private/Language/locallang_mod.xlf',
+        'icon' => 'EXT:fw_authenticator/Resources/Public/Icons/icon.svg',
+        'labels' => 'LLL:EXT:fw_authenticator/Resources/Private/Language/locallang_mod.xlf:Authenticator',
     ]
     );
 

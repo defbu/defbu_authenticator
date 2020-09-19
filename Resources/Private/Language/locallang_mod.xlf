@@ -6,7 +6,9 @@
             <authorEmail>info@defbu.nl</authorEmail>
         </header>
         <body>
-
+			<trans-unit id="Authenticator" xml:space="preserve">
+            	<source>Authenticator</source>
+            </trans-unit>
 
 
         </body>

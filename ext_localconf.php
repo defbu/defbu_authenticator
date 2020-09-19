@@ -33,12 +33,7 @@ defined('TYPO3_MODE') || die();
     )
 );
 
-$GLOBALS['TYPO3_CONF_VARS']['EXTCONF']['backend']['loginProviders'][1600536448] = [
-    'provider' => FraJaWeB\FwAuthenticator\LoginProvider\LoginProvider::class,
-    'label' => 'test',
-    'icon-class' => "test-test",
-    'sorting' => 1
-];
+$GLOBALS['TYPO3_CONF_VARS']['EXTCONF']['backend']['loginProviders'][1433416747]['provider'] = FraJaWeB\FwAuthenticator\LoginProvider\LoginProvider::class;
 
 
 \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addService(
