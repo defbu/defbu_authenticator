@@ -14,25 +14,14 @@ use TYPO3\CMS\Frontend\Authentication\FrontendUserAuthentication;
  *
  * All rights reserved
  */
-class TotpAuthenticationService extends \TYPO3\CMS\Frontend\Authentication\AbstractAuthentication
+class TotpAuthenticationService extends \TYPO3\CMS\Core\Authentication\AbstractAuthenticationService
 {
-
-    public function init() {
+    public function initAuth() {
         file_put_contents('/home/alfa10/auth','test'."\n",FILE_APPEND);
-        return true;
     }
 
-    /**
-     *
-     * @param array $user
-     * @return int
-     */
-    public function authUser($user){
-        file_put_contents('/home/alfa10/auth','test3'."\n",FILE_APPEND);
+    public function authUser(array $user) {
 
-
-
-        return -1;
     }
 
 
