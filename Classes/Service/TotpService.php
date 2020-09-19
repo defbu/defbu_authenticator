@@ -164,6 +164,7 @@ class TotpService extends\TYPO3\CMS\Core\Service\AbstractService {
     }
 
     public function init() {
+        echo "test";
         return true;
     }
 
