@@ -6,21 +6,21 @@
 	<f:flashMessages/>
 	<f:if condition="{user.txFwauthenticatorActive}">
 	<f:then>
-		<f:link.action action="deactivate" class="btn btn-default">Deactivate</f:link.action>
-		<h2>Current secret</h2>
+		<f:link.action action="deactivate" class="btn btn-default"><f:translate key="LLL:EXT:fw_authenticator/Resources/Private/Language/locallang_mod.xlf:Deactivate"/></f:link.action>
+		<h2><f:translate key="LLL:EXT:fw_authenticator/Resources/Private/Language/locallang_mod.xlf:Secret"/></h2>
 		<p><b>{user.txFwauthenticatorSecret}</b></p>
-		<h2>Google authenticator</h2>
+		<h2><f:translate key="LLL:EXT:fw_authenticator/Resources/Private/Language/locallang_mod.xlf:Setup"/></h2>
 		<ul>
-			<li>Install Google Authenticator from the App Store or Android Play</li>
-			<li>Scan the QR-code below, or add the secret manually<br><br>
+			<li><f:translate key="LLL:EXT:fw_authenticator/Resources/Private/Language/locallang_mod.xlf:Install"/></li>
+			<li><f:translate key="LLL:EXT:fw_authenticator/Resources/Private/Language/locallang_mod.xlf:Scan"/><br><br>
 			<img src="{qr}"/>
 
 			</li>
-			<li>Done</li>
+			<li><f:translate key="LLL:EXT:fw_authenticator/Resources/Private/Language/locallang_mod.xlf:Done"/></li>
 		</ul>
 	</f:then>
 	<f:else>
-		<f:link.action action="activate" class="btn btn-default">Activate</f:link.action>
+		<f:link.action action="activate" class="btn btn-default"><f:translate key="LLL:EXT:fw_authenticator/Resources/Private/Language/locallang_mod.xlf:Activate"/></f:link.action>
 	</f:else>
 	</f:if>
  </div>
