@@ -31,7 +31,7 @@ class TotpAuthenticationService extends \TYPO3\CMS\Core\Authentication\AbstractA
     public function authUser(array $user) {
         print_r($user);
         return 0;
-
+    }
 
 
 }
