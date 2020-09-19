@@ -18,44 +18,46 @@ class BeUser extends \TYPO3\CMS\Extbase\Domain\Model\BackendUser {
      *
      * @var bool
      */
-    protected $fwAuthenticatorActive;
+    protected $txFwauthenticatorActive;
 
     /**
      * @var string
      */
-    protected $fwAuthenticatorSecret;
-
+    protected $txFwauthenticatorSecret;
     /**
-     * @return boolean $fwAuthenticatorActive
+     * @return boolean $txFwauthenticatorActive
      */
-    public function getFwAuthenticatorActive()
+    public function getTxFwauthenticatorActive()
     {
-        return $this->fwAuthenticatorActive;
+        return $this->txFwauthenticatorActive;
     }
 
     /**
-     * @return string $fwAuthenticatorSecret
+     * @return string $txFwauthenticatorSecret
      */
-    public function getFwAuthenticatorSecret()
+    public function getTxFwauthenticatorSecret()
     {
-        return $this->fwAuthenticatorSecret;
+        return $this->txFwauthenticatorSecret;
     }
 
     /**
-     * @param boolean $fwAuthenticatorActive
+     * @param boolean $txFwauthenticatorActive
      */
-    public function setFwAuthenticatorActive($fwAuthenticatorActive)
+    public function setTxFwauthenticatorActive($txFwauthenticatorActive)
     {
-        $this->fwAuthenticatorActive = $fwAuthenticatorActive;
+        $this->txFwauthenticatorActive = $txFwauthenticatorActive;
     }
 
     /**
-     * @param string $fwAuthenticatorSecret
+     * @param string $txFwauthenticatorSecret
      */
-    public function setFwAuthenticatorSecret($fwAuthenticatorSecret)
+    public function setTxFwauthenticatorSecret($txFwauthenticatorSecret)
     {
-        $this->fwAuthenticatorSecret = $fwAuthenticatorSecret;
+        $this->txFwauthenticatorSecret = $txFwauthenticatorSecret;
     }
+
+
+
 
 
 

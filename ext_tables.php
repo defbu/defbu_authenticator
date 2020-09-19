@@ -42,5 +42,5 @@ $GLOBALS['TYPO3_USER_SETTINGS']['columns']['tx_fwauthenticator_secret'] = [
     ];
 
 \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addFieldsToUserSettings(
-    'LLL:EXT:fw_authenticator/Resources/Private/Language/locallang_db.xlf:Authenticator,tx_fwauthenticator_active,tx_fwauthenticator_secret'
+    '--div--;Authenticator,tx_fwauthenticator_active,tx_fwauthenticator_secret'
 );

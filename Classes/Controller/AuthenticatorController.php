@@ -64,8 +64,8 @@ class AuthenticatorController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionCo
         $beUser = $this->beUserRepository->findByUid($uid);
         if (isset($beUser)) {
             $this->view->assign('user',$beUser);
-            if ($beUser->getFwAuthenticatorActive()) {
-                $base64 = $this->totpService->getQr($beUser->getUsername(),$GLOBALS['TYPO3_CONF_VARS']['SYS']['sitename'],$beUser->getFwAuthenticatorSecret());
+            if ($beUser->getTxFwauthenticatorActive()) {
+                $base64 = $this->totpService->getQr($beUser->getUsername(),$GLOBALS['TYPO3_CONF_VARS']['SYS']['sitename'],$beUser->getTxFwauthenticatorSecret());
                 $this->view->assign('qr',$base64);
             }
 
@@ -76,10 +76,10 @@ class AuthenticatorController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionCo
         $uid = $GLOBALS['BE_USER']->user["uid"];
         $beUser = $this->beUserRepository->findByUid($uid);
         if (isset($beUser)) {
-            $beUser->setFwAuthenticatorActive(true);
+            $beUser->setTxFwauthenticatorActive(true);
             $this->beUserRepository->update($beUser);
             $secret = $this->totpService->generateSecretKey();
-            $beUser->setFwAuthenticatorSecret($secret);
+            $beUser->setTxFwauthenticatorSecret($secret);
             $this->beUserRepository->update($beUser);
             $this->addFlashMessage('Link Google Authenticator before logging out!','Authenticator activated',\TYPO3\CMS\Core\Messaging\FlashMessage::WARNING);
         }
@@ -90,8 +90,8 @@ class AuthenticatorController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionCo
         $uid = $GLOBALS['BE_USER']->user["uid"];
         $beUser = $this->beUserRepository->findByUid($uid);
         if (isset($beUser)) {
-            $beUser->setFwAuthenticatorActive(false);
-            $beUser->setFwAuthenticatorSecret("");
+            $beUser->setTxFwauthenticatorActive(false);
+            $beUser->setTxFwauthenticatorSecret("");
             $this->beUserRepository->update($beUser);
         }
         $this->redirect("index");

@@ -18,7 +18,10 @@ class TotpAuthService extends \TYPO3\CMS\Core\Authentication\AuthenticationServi
 {
 
     public function authUser(array $user) {
-        print_r($user);
+        
+        if ($user["fw_authenticator_active"])
+        
+        
         return 0;
     }
 
