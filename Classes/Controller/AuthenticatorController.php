@@ -90,7 +90,7 @@ class AuthenticatorController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionCo
             $this->beUserRepository->update($beUser);
 
             $message = $this->languageService->sL('LLL:EXT:fw_authenticator/Resources/Private/Language/locallang_mod.xlf:Activate.message');
-            $this->addFlashMessage($message,\TYPO3\CMS\Core\Messaging\FlashMessage::WARNING);
+            $this->addFlashMessage($message,'',\TYPO3\CMS\Core\Messaging\FlashMessage::WARNING);
         }
         $this->redirect("index");
     }
@@ -103,7 +103,7 @@ class AuthenticatorController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionCo
             $beUser->setTxFwauthenticatorSecret("");
             $this->beUserRepository->update($beUser);
             $message = $this->languageService->sL('LLL:EXT:fw_authenticator/Resources/Private/Language/locallang_mod.xlf:Deactivate.message');
-            $this->addFlashMessage($message,\TYPO3\CMS\Core\Messaging\FlashMessage::ERROR);
+            $this->addFlashMessage($message,'',\TYPO3\CMS\Core\Messaging\FlashMessage::ERROR);
         }
         $this->redirect("index");
     }
