@@ -152,7 +152,7 @@ class TotpService extends \TYPO3\CMS\Core\Service\AbstractService {
                 $timeStamp = (int)$useTimeStamp;
             }
 
-            $binarySeed = base32Decode($secret);
+            $binarySeed = $this->base32Decode($secret);
 
             for ($ts = $timeStamp - $window; $ts <= $timeStamp + $window; $ts++) {
                 $key1 = $this->oathHotp($binarySeed, $ts);
