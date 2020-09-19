@@ -17,7 +17,7 @@ defined('TYPO3_MODE') || die();
     // Service type
     'auth',
     // Service key
-    'tx_fwauthenticator_totp',
+    'FraJaWeB\FwAuthenticator\Service\TotpService',
     array(
         'title' => 'Authenticator TOTP',
         'description' => 'Authenticator TOTP',
