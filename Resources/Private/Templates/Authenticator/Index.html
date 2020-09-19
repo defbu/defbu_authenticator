@@ -4,11 +4,11 @@
 </f:section>
 <f:section name="content">
 	<f:flashMessages/>
-	<f:if condition="{user.fwAuthenticatorActive}">
+	<f:if condition="{user.txFwauthenticatorActive}">
 	<f:then>
 		<f:link.action action="deactivate" class="btn btn-default">Deactivate</f:link.action>
 		<h2>Current secret</h2>
-		<p><b>{user.fwAuthenticatorSecret}</b></p>
+		<p><b>{user.txFwauthenticatorSecret}</b></p>
 		<h2>Google authenticator</h2>
 		<ul>
 			<li>Install Google Authenticator from the App Store or Android Play</li>
