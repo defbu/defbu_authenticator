@@ -40,6 +40,10 @@ class AuthenticatorController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionCo
      */
     protected $totpService;
 
+    /**
+     *
+     * @var \TYPO3\CMS\Lang\LanguageService
+     */
     protected $languageService;
 
     /**
@@ -57,7 +61,7 @@ class AuthenticatorController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionCo
     public function __construct()
     {
         $this->totpService = \TYPO3\CMS\Core\Utility\GeneralUtility::makeInstanceService('totp');
-        $this->languageSerivce = $this->getLanguageService();
+        $this->languageSerivce = \TYPO3\CMS\Core\Utility\GeneralUtility::makeInstance('TYPO3\CMS\Lang\LanguageService');
     }
 
     public function indexAction() {
