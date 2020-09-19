@@ -81,7 +81,9 @@ class AuthenticatorController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionCo
             $secret = $this->totpService->generateSecretKey();
             $beUser->setTxFwauthenticatorSecret($secret);
             $this->beUserRepository->update($beUser);
-            $this->addFlashMessage('Link Google Authenticator before logging out!','Authenticator activated',\TYPO3\CMS\Core\Messaging\FlashMessage::WARNING);
+
+            $message = $languageService->sL('LLL:EXT:fw_authenticator/Resources/Private/Language/locallang_mod.xlf:Activate.message');
+            $this->addFlashMessage($message,\TYPO3\CMS\Core\Messaging\FlashMessage::WARNING);
         }
         $this->redirect("index");
     }
@@ -93,6 +95,8 @@ class AuthenticatorController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionCo
             $beUser->setTxFwauthenticatorActive(false);
             $beUser->setTxFwauthenticatorSecret("");
             $this->beUserRepository->update($beUser);
+            $message = $languageService->sL('LLL:EXT:fw_authenticator/Resources/Private/Language/locallang_mod.xlf:Deactivate.message');
+            $this->addFlashMessage($message,\TYPO3\CMS\Core\Messaging\FlashMessage::ERROR);
         }
         $this->redirect("index");
     }

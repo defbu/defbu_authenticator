@@ -42,6 +42,15 @@
             <trans-unit id="TotpAuthService.description" xml:space="preserve">
             	<source>This authentication service adds support for authentication based on Time-based One-Time Passwords</source>
             </trans-unit>
+            <trans-unit id="Activate.message" xml:space="preserve">
+            	<source>Link Google Authenticator before logging out!','Authenticator activated</source>
+            </trans-unit>
+            <trans-unit id="Deactivate.message" xml:space="preserve">
+            	<source>Authenticator disabled!</source>
+            </trans-unit>
+
+
+
 
 
         </body>
