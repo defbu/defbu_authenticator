@@ -39,7 +39,7 @@ class AuthenticatorController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionCo
      * @var \FraJaWeB\FwAuthenticator\Service\TotpService
      */
     protected $totpService;
-    
+
     /**
      * Set up the doc header properly here
      *
@@ -67,7 +67,7 @@ class AuthenticatorController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionCo
             if ($beUser->getFwAuthenticatorActive()) {
                 $url = $this->totpService->getUrl($beUser->getUsername(),$GLOBALS['TYPO3_CONF_VARS']['SYS']['sitename'],$beUser->getFwAuthenticatorSecret());
                 $typo3conf = Environment::getConfigPath();
-                require_once($typo3conf.'ext/fw_authenticator/Library/phpqrcode/phpqrcode.php');
+                require_once($typo3conf.'/ext/fw_authenticator/Library/phpqrcode/phpqrcode.php');
             }
         }
     }
