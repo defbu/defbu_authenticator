@@ -19,7 +19,24 @@ class TotpAuthService extends \TYPO3\CMS\Core\Authentication\AbstractAuthenticat
     }
 
     public function authUser(array $user) {
-        return -1;
+
+        if (!$user['tx_fwauthenticator_active']) {
+            return 100;
+        }
+        else {
+            $key = \TYPO3\CMS\Core\Utility\GeneralUtility::_GP('t3-authenticator-key');
+            $secret = $user['tx_fwauthenticator_secret'];
+
+            $authResult = $this->totpService->verifyKey($secret, $key);
+
+            if ($authResult) {
+                return 100;
+            }
+            else {
+                return 0;
+            }
+        }
+        return 0;
     }
 
 }

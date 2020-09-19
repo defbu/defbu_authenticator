@@ -20,9 +20,9 @@ class TotpService extends \TYPO3\CMS\Core\Service\AbstractService {
 
     private $timeSpan = 30;
 
-    private $keyLength = 32;
+    private $keyLength = 6;
 
-    private $otpLength = 6;
+    private $secretLength = 32;
 
     private $lut =  [
         "A" => 0,
@@ -90,7 +90,7 @@ class TotpService extends \TYPO3\CMS\Core\Service\AbstractService {
     public function generateSecretKey() {
         $chars 	= array_merge(range("2","7"),range("A","Z"));
         $s = "";
-        for ($i = 0; $i < $this->keyLength; $i++) {
+        for ($i = 0; $i < $this->secretLength; $i++) {
             $s .= $chars[array_rand($chars)];
         }
         return $s;
@@ -113,7 +113,7 @@ class TotpService extends \TYPO3\CMS\Core\Service\AbstractService {
         }
         $binCounter = pack('N*', 0) . pack('N*', $counter);
         $hash 	 = hash_hmac ('sha1', $binCounter, $key, true);
-        return str_pad($this->oathTruncate($hash), $this->otpLength, '0', STR_PAD_LEFT);
+        return str_pad($this->oathTruncate($hash), $this->keyLength, '0', STR_PAD_LEFT);
 
     }
 
@@ -131,7 +131,7 @@ class TotpService extends \TYPO3\CMS\Core\Service\AbstractService {
             ((ord($hash[$offset+1]) & 0xff) << 16 ) |
             ((ord($hash[$offset+2]) & 0xff) << 8 ) |
             (ord($hash[$offset+3]) & 0xff)
-            ) % pow(10, $this->otpLength);
+            ) % pow(10, $this->keyLength);
     }
 
     /**
@@ -143,20 +143,22 @@ class TotpService extends \TYPO3\CMS\Core\Service\AbstractService {
      * @return boolean
      */
     public function verifyKey($secret, $key, $window = 4, $useTimeStamp = true) {
+        if ((strlen($secret) == $this->keyLength) && (strlen($key) == $this->keyLength)) {
+            $timeStamp = $this->getTimestamp();
 
-        $timeStamp = $this->getTimestamp();
+            if ($useTimeStamp !== true) {
+                $timeStamp = (int)$useTimeStamp;
+            }
 
-        if ($useTimeStamp !== true) {
-            $timeStamp = (int)$useTimeStamp;
-        }
+            $binarySeed = base32Decode($secret);
 
-        $binarySeed = base32Decode($secret);
-
-        for ($ts = $timeStamp - $window; $ts <= $timeStamp + $window; $ts++) {
-            if ($this->oathHotp($binarySeed, $ts) == $key) {
-                return true;
+            for ($ts = $timeStamp - $window; $ts <= $timeStamp + $window; $ts++) {
+                if ($this->oathHotp($binarySeed, $ts) == $key) {
+                    return true;
+                }
             }
         }
+        return false;
     }
 
     public function getUrl($username,$site,$secret) {
