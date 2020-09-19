@@ -29,7 +29,6 @@ defined('TYPO3_MODE') || die();
 
         'os' => '',
         'exec' => '',
-
         'className' => FraJaWeB\FwAuthenticator\Service\TotpAuthenticationService::class
     )
 );
