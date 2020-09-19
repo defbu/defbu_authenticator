@@ -15,7 +15,7 @@ namespace FraJaWeB\FwAuthenticator\Controller;
 
 use TYPO3\CMS\Extbase\Annotation as Extbase;
 use TYPO3\CMS\Core\Core\Environment as Environment;
-use TYPO3\CMS\Extbase\Mvw\View\ViewInterface as ViewInterface;
+use TYPO3\CMS\Extbase\Mvc\View\ViewInterface as ViewInterface;
 
 class AuthenticatorController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionController {
 
