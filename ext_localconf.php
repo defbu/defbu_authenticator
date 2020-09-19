@@ -16,7 +16,7 @@ defined('TYPO3_MODE') || die();
     // Service type
     'auth',
     // Service key
-    '\FraJaWeB\FwAuthenticator\Service\TotpAuthService',
+    'FraJaWeB\FwAuthenticator\Service\TotpAuthService',
     array(
         'title' => 'Authentication TOTP',
         'description' => 'Authentication TOTP',
@@ -33,7 +33,7 @@ defined('TYPO3_MODE') || die();
     )
 );
 
-$GLOBALS['TYPO3_CONF_VARS']['EXTCONF']['backend']['loginProviders'][1600536448]['provider'] = \FraJaWeB\FwAuthenticator\LoginProvider\LoginProvider::class;
+$GLOBALS['TYPO3_CONF_VARS']['EXTCONF']['backend']['loginProviders'][1600536448]['provider'] = FraJaWeB\FwAuthenticator\LoginProvider\LoginProvider::class;
 
 
 
@@ -43,7 +43,7 @@ $GLOBALS['TYPO3_CONF_VARS']['EXTCONF']['backend']['loginProviders'][1600536448][
     // Service type
     'totp',
     // Service key
-    '\FraJaWeB\FwAuthenticator\Service\TotpService',
+    'FraJaWeB\FwAuthenticator\Service\TotpService',
     array(
         'title' => 'Authenticator TOTP',
         'description' => 'Authenticator TOTP',
@@ -57,6 +57,6 @@ $GLOBALS['TYPO3_CONF_VARS']['EXTCONF']['backend']['loginProviders'][1600536448][
         'os' => '',
         'exec' => '',
 
-        'className' => \FraJaWeB\FwAuthenticator\Service\TotpService::class
+        'className' => FraJaWeB\FwAuthenticator\Service\TotpService::class
     )
 );
