@@ -1,14 +1,14 @@
 <?php
 declare(strict_types=1);
 /**
- * Copyright FraJa WeB - DEFBU (c) 2019
+ * Copyright DEFBU (c) 2020
  */
 namespace DEFBU\DefbuAuthenticator\Controller;
 
 /**
  * Controller Abstract
  *
- * @author Frank Buijze - User Sense <frank@usersense.nl>
+ * @author Frank Buijze - DEFBU <info@defbu.nl>
  *
  * All rights reserved
  */

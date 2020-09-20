@@ -1,4 +1,8 @@
 <?php
+declare(strict_types=1);
+/**
+ * Copyright DEFBU (c) 2020
+ */
 namespace DEFBU\DefbuAuthenticator\Service;
 
 class TotpAuthService extends \TYPO3\CMS\Core\Authentication\AbstractAuthenticationService

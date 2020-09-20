@@ -1,7 +1,7 @@
 <?php
 declare(strict_types=1);
 /**
- * Copyright FraJa WeB - DEFBU (c) 2019
+ * Copyright DEFBU (c) 2020
  */
 namespace DEFBU\DefbuAuthenticator\Service;
 
