@@ -6,21 +6,21 @@
 	<f:flashMessages/>
 	<f:if condition="{user.txDefbuauthenticatorActive}">
 	<f:then>
-		<f:link.action action="deactivate" class="btn btn-default"><f:translate key="LLL:EXT:fw_authenticator/Resources/Private/Language/locallang_mod.xlf:Deactivate"/></f:link.action>
-		<h2><f:translate key="LLL:EXT:fw_authenticator/Resources/Private/Language/locallang_mod.xlf:Secret"/></h2>
+		<f:link.action action="deactivate" class="btn btn-default"><f:translate key="LLL:EXT:defbu_authenticator/Resources/Private/Language/locallang_mod.xlf:Deactivate"/></f:link.action>
+		<h2><f:translate key="LLL:EXT:defbu_authenticator/Resources/Private/Language/locallang_mod.xlf:Secret"/></h2>
 		<p><b>{user.txDefbuauthenticatorSecret}</b></p>
-		<h2><f:translate key="LLL:EXT:fw_authenticator/Resources/Private/Language/locallang_mod.xlf:Setup"/></h2>
+		<h2><f:translate key="LLL:EXT:defbu_authenticator/Resources/Private/Language/locallang_mod.xlf:Setup"/></h2>
 		<ul>
-			<li><f:translate key="LLL:EXT:fw_authenticator/Resources/Private/Language/locallang_mod.xlf:Install"/></li>
-			<li><f:translate key="LLL:EXT:fw_authenticator/Resources/Private/Language/locallang_mod.xlf:Scan"/><br><br>
+			<li><f:translate key="LLL:EXT:defbu_authenticator/Resources/Private/Language/locallang_mod.xlf:Install"/></li>
+			<li><f:translate key="LLL:EXT:defbu_authenticator/Resources/Private/Language/locallang_mod.xlf:Scan"/><br><br>
 			<img src="{qr}"/>
 
 			</li>
-			<li><f:translate key="LLL:EXT:fw_authenticator/Resources/Private/Language/locallang_mod.xlf:Done"/></li>
+			<li><f:translate key="LLL:EXT:defbu_authenticator/Resources/Private/Language/locallang_mod.xlf:Done"/></li>
 		</ul>
 	</f:then>
 	<f:else>
-		<f:link.action action="activate" class="btn btn-default"><f:translate key="LLL:EXT:fw_authenticator/Resources/Private/Language/locallang_mod.xlf:Activate"/></f:link.action>
+		<f:link.action action="activate" class="btn btn-default"><f:translate key="LLL:EXT:defbu_authenticator/Resources/Private/Language/locallang_mod.xlf:Activate"/></f:link.action>
 	</f:else>
 	</f:if>
  </div>

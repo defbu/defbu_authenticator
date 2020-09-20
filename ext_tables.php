@@ -9,7 +9,7 @@
 defined('TYPO3_MODE') || die();
 
 
-$GLOBALS['TBE_STYLES']['stylesheet2'] = '../typo3conf/ext/fw_authenticator/Resources/Public/Css/defbu_authenticator.css';
+$GLOBALS['TBE_STYLES']['stylesheet2'] = '../typo3conf/ext/defbu_authenticator/Resources/Public/Css/defbu_authenticator.css';
 
 \TYPO3\CMS\Extbase\Utility\ExtensionUtility::registerModule(
     'DEFBU.DefbuAuthenticator',
@@ -21,7 +21,7 @@ $GLOBALS['TBE_STYLES']['stylesheet2'] = '../typo3conf/ext/fw_authenticator/Resou
     ],
     [
         'access' => 'user',
-        'icon' => 'EXT:fw_authenticator/Resources/Public/Icons/icon.svg',
-        'labels' => 'LLL:EXT:fw_authenticator/Resources/Private/Language/locallang_mod.xlf:Authenticator',
+        'icon' => 'EXT:defbu_authenticator/Resources/Public/Icons/icon.svg',
+        'labels' => 'LLL:EXT:defbu_authenticator/Resources/Private/Language/locallang_mod.xlf:Authenticator',
     ]
 );

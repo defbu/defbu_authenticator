@@ -10,7 +10,7 @@ defined('TYPO3_MODE') || die();
 
 \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addService(
     // Extension Key
-    'fw_authenticator',
+    'defbu_authenticator',
     // Service type
     'auth',
     // Service key
@@ -36,7 +36,7 @@ $GLOBALS['TYPO3_CONF_VARS']['EXTCONF']['backend']['loginProviders'][1433416747][
 
 \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addService(
     // Extension Key
-    'fw_authenticator',
+    'defbu_authenticator',
     // Service type
     'totp',
     // Service key

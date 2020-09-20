@@ -1,7 +1,7 @@
 .t3-defbuauthenticator-key {
     width: 16px;
     height: 16px;
-    background-image: url('/typo3conf/ext/fw_authenticator/Resources/Public/Icons/icon.svg');
+    background-image: url('/typo3conf/ext/defbu_authenticator/Resources/Public/Icons/icon.svg');
     background-repeat: no-repeat;
     display: block;
 }

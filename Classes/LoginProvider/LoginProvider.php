@@ -35,7 +35,7 @@ class LoginProvider extends UsernamePasswordLoginProvider {
     {
         parent::render($view, $pageRenderer, $loginController);
         $view->setTemplatePathAndFilename(
-            GeneralUtility::getFileAbsFileName('EXT:fw_authenticator/Resources/Private/Templates/LoginProvider.html')
+            GeneralUtility::getFileAbsFileName('EXT:defbu_authenticator/Resources/Private/Templates/LoginProvider.html')
         );
     }
 }

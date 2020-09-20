@@ -89,7 +89,7 @@ class AuthenticatorController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionCo
             $beUser->setTxDefbuauthenticatorSecret($secret);
             $this->beUserRepository->update($beUser);
 
-            $message = $this->languageService->sL('LLL:EXT:fw_authenticator/Resources/Private/Language/locallang_mod.xlf:Activate.message');
+            $message = $this->languageService->sL('LLL:EXT:defbu_authenticator/Resources/Private/Language/locallang_mod.xlf:Activate.message');
             $this->addFlashMessage($message,'',\TYPO3\CMS\Core\Messaging\FlashMessage::WARNING);
         }
         $this->redirect("index");
@@ -102,7 +102,7 @@ class AuthenticatorController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionCo
             $beUser->setTxDefbuauthenticatorActive(false);
             $beUser->setTxDefbuauthenticatorSecret("");
             $this->beUserRepository->update($beUser);
-            $message = $this->languageService->sL('LLL:EXT:fw_authenticator/Resources/Private/Language/locallang_mod.xlf:Deactivate.message');
+            $message = $this->languageService->sL('LLL:EXT:defbu_authenticator/Resources/Private/Language/locallang_mod.xlf:Deactivate.message');
             $this->addFlashMessage($message,'',\TYPO3\CMS\Core\Messaging\FlashMessage::ERROR);
         }
         $this->redirect("index");

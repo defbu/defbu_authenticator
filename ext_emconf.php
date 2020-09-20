@@ -2,7 +2,7 @@
 /**
  * Copyright notice
  *
- * (c) 2020 FraJa WeB - DEFBU - Frank Buijze
+ * (c) 2020 DEFBU - Frank Buijze
  *
  * All rights reserved
  */
@@ -13,10 +13,10 @@
 $EM_CONF[$_EXTKEY] = [
     'title' => 'Authenticator',
     'description' => '',
-    'category' => 'system',
+    'category' => 'module',
     'constraints' => [
         'depends' => [
-            'typo3' => '9.5.0-10.99.99',
+            'typo3' => '9.0.0-10.99.99',
             'php' => '7.2.0-7.4.99'
         ],
         'conflicts' => [
@@ -33,6 +33,6 @@ $EM_CONF[$_EXTKEY] = [
     'clearCacheOnLoad' => 1,
     'author' => 'Frank Buijze',
     'author_email' => 'info@defbu.nl',
-    'author_company' => 'FraJa WeB - Defbu',
-    'version' => '0.1.0',
+    'author_company' => 'Defbu',
+    'version' => '1.0.0',
 ];
