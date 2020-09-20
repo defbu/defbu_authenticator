@@ -92,7 +92,9 @@ class AuthenticatorController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionCo
             $message = $this->languageService->sL('LLL:EXT:defbu_authenticator/Resources/Private/Language/locallang_mod.xlf:Activate.message');
             $this->addFlashMessage($message,'',\TYPO3\CMS\Core\Messaging\FlashMessage::WARNING);
         }
-        $this->redirect("index");
+        else {
+            $this->redirect("index");
+        }
     }
 
     public function deactivateAction() {

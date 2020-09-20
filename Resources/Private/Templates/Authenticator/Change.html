@@ -1,0 +1,27 @@
+<f:layout name="Default" />
+<f:section name="headline">
+	<h1>Authenticator</h1>
+</f:section>
+<f:section name="content">
+	<f:flashMessages/>
+	<f:if condition="{user.txDefbuauthenticatorActive}">
+	<f:then>
+		<f:link.action action="deactivate" class="btn btn-default"><f:translate key="LLL:EXT:defbu_authenticator/Resources/Private/Language/locallang_mod.xlf:Deactivate"/></f:link.action>
+		<h2><f:translate key="LLL:EXT:defbu_authenticator/Resources/Private/Language/locallang_mod.xlf:Secret"/></h2>
+		<p><b>{user.txDefbuauthenticatorSecret}</b></p>
+		<h2><f:translate key="LLL:EXT:defbu_authenticator/Resources/Private/Language/locallang_mod.xlf:Setup"/></h2>
+		<ul>
+			<li><f:translate key="LLL:EXT:defbu_authenticator/Resources/Private/Language/locallang_mod.xlf:Install"/></li>
+			<li><f:translate key="LLL:EXT:defbu_authenticator/Resources/Private/Language/locallang_mod.xlf:Scan"/><br><br>
+			<img src="{qr}"/>
+
+			</li>
+			<li><f:translate key="LLL:EXT:defbu_authenticator/Resources/Private/Language/locallang_mod.xlf:Done"/></li>
+		</ul>
+	</f:then>
+	<f:else>
+		<f:link.action action="activate" class="btn btn-default"><f:translate key="LLL:EXT:defbu_authenticator/Resources/Private/Language/locallang_mod.xlf:Activate"/></f:link.action>
+	</f:else>
+	</f:if>
+ </div>
+</f:section>

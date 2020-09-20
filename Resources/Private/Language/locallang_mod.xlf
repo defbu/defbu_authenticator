@@ -12,6 +12,9 @@
             <trans-unit id="Activate" xml:space="preserve">
             	<source>Activate</source>
             </trans-unit>
+            <trans-unit id="Change" xml:space="preserve">
+            	<source>Reset secret</source>
+            </trans-unit>
             <trans-unit id="Deactivate" xml:space="preserve">
             	<source>Deactivate</source>
             </trans-unit>
