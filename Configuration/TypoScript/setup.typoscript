@@ -1,13 +1,13 @@
-module.tx_fwtranscript {
+module.tx_defbuauthenticator {
     view {
         templateRootPaths {
-            10 = EXT:fw_transcript/Resources/Private/Backend/Templates/
+            10 = EXT:defbu_authenticator/Resources/Private/Backend/Templates/
         }
         partialRootPaths {
-            10 = EXT:fw_transcript/Resources/Private/Backend/Partials/
+            10 = EXT:defbu_authenticator/Resources/Private/Backend/Partials/
         }
         layoutRootPaths {
-           10 = EXT:fw_trancsript/Resources/Private/Backend/Layouts/
+           10 = EXT:defbu_authenticator/Resources/Private/Backend/Layouts/
         }
     }
     persistence {
