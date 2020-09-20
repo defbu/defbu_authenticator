@@ -12,7 +12,7 @@ module.tx_fwtranscript {
     }
     persistence {
 		classes {
-			UserSense\UserSense\Domain\Model\BeUser {
+			DEFBU\DefbuAuthenticator\Domain\Model\BeUser {
 				mapping {
 					tableName = be_users
 				}
