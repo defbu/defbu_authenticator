@@ -1,0 +1,29 @@
+{
+	"name" : "Authenticator",
+	"description" : "A TOTP authenticator",
+	"homepage" : "https://www.defbu.nl",
+	"license" : "GPL-2.0-or-later",
+	"authors" : [{
+			"name" : "Frank Buijze",
+			"email" : "frank@buijze.eu",
+			"homepage" : "https://www.defbu.nl",
+			"role" : "Developer"
+		}
+	],
+	"require" : {
+		"php" : "^7.2",
+		"typo3/cms-backend" : "^9.0 || ^10.0",
+		"typo3/cms-core" : "^9.0 || ^10.0"
+	},
+	"support" : {
+		"email" : "info@defbu.nl",
+		"issues" : "https://github.com/defbu/defbu_authenticator/issues",
+		"source" : "https://github.com/defbu/defbu_authenticator"
+	},
+	"type" : "typo3-cms-extension",
+	"autoload" : {
+		"psr-4" : {
+			"DEFBU\\DefbuAuthenticator\\" : "Classes/"
+		}
+	}
+}

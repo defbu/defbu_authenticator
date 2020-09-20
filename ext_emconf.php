@@ -27,7 +27,7 @@ $EM_CONF[$_EXTKEY] = [
             'DEFBU\\DefbuAuthenticator\\' => 'Classes'
         ],
     ],
-    'state' => 'alfa',
+    'state' => 'stable',
     'uploadfolder' => 0,
     'createDirs' => '',
     'clearCacheOnLoad' => 1,
