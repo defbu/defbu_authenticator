@@ -12,7 +12,6 @@ namespace DEFBU\DefbuAuthenticator\LoginProvider;
  *
  * All rights reserved
  */
-
 use TYPO3\CMS\Extbase\Annotation as Extbase;
 use TYPO3\CMS\Backend\Controller\LoginController;
 use TYPO3\CMS\Backend\LoginProvider\UsernamePasswordLoginProvider;
