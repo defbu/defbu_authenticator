@@ -71,11 +71,6 @@ class AuthenticatorController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionCo
         $beUser = $this->beUserRepository->findByUid($uid);
         if (isset($beUser)) {
             $this->view->assign('user',$beUser);
-            if ($beUser->getTxDefbuauthenticatorActive()) {
-                $base64 = $this->totpService->getQr($beUser->getUsername(),$GLOBALS['TYPO3_CONF_VARS']['SYS']['sitename'],$beUser->getTxDefbuauthenticatorSecret());
-                $this->view->assign('qr',$base64);
-            }
-
         }
     }
 
@@ -91,6 +86,11 @@ class AuthenticatorController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionCo
 
             $message = $this->languageService->sL('LLL:EXT:defbu_authenticator/Resources/Private/Language/locallang_mod.xlf:Activate.message');
             $this->addFlashMessage($message,'',\TYPO3\CMS\Core\Messaging\FlashMessage::WARNING);
+            $this->view->assign('user',$beUser);
+            if ($beUser->getTxDefbuauthenticatorActive()) {
+                $base64 = $this->totpService->getQr($beUser->getUsername(),$GLOBALS['TYPO3_CONF_VARS']['SYS']['sitename'],$beUser->getTxDefbuauthenticatorSecret());
+                $this->view->assign('qr',$base64);
+            }
         }
         else {
             $this->redirect("index");
