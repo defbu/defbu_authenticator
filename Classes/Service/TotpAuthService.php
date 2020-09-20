@@ -1,11 +1,11 @@
 <?php
-namespace FraJaWeB\FwAuthenticator\Service;
+namespace DEFBU\DefbuAuthenticator\Service;
 
 class TotpAuthService extends \TYPO3\CMS\Core\Authentication\AbstractAuthenticationService
 {
     /**
      *
-     * @var \FraJaWeB\FwAuthenticator\Service\TotpService
+     * @var \DEFBU\DefbuAuthenticator\Service\TotpService
      */
     private $totpService = null;
 
@@ -20,12 +20,12 @@ class TotpAuthService extends \TYPO3\CMS\Core\Authentication\AbstractAuthenticat
 
     public function authUser(array $user) {
 
-        if (!$user['tx_fwauthenticator_active']) {
+        if (!$user['tx_defbuauthenticator_active']) {
             return 100;
         }
         else {
-            $key = \TYPO3\CMS\Core\Utility\GeneralUtility::_GP('t3-fwauthenticator-key');
-            $secret = $user['tx_fwauthenticator_secret'];
+            $key = \TYPO3\CMS\Core\Utility\GeneralUtility::_GP('t3-defbuauthenticator-key');
+            $secret = $user['tx_defbuauthenticator_secret'];
 
             $authResult = $this->totpService->verifyKey($secret, $key);
 

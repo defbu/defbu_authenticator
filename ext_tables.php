@@ -9,12 +9,12 @@
 defined('TYPO3_MODE') || die();
 
 
-$GLOBALS['TBE_STYLES']['stylesheet2'] = '../typo3conf/ext/fw_authenticator/Resources/Public/Css/fw_authenticator.css';
+$GLOBALS['TBE_STYLES']['stylesheet2'] = '../typo3conf/ext/fw_authenticator/Resources/Public/Css/defbu_authenticator.css';
 
 \TYPO3\CMS\Extbase\Utility\ExtensionUtility::registerModule(
-    'FraJaWeB.FwAuthenticator',
+    'DEFBU.DefbuAuthenticator',
     'system',
-    'tx_fwauthenticator',
+    'tx_defbuauthenticator',
     'bottom',
     [
         Authenticator::class => 'index, activate, deactivate'

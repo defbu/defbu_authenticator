@@ -3,7 +3,7 @@ declare(strict_types=1);
 /**
  * Copyright FraJa WeB - DEFBU (c) 2019
  */
-namespace FraJaWeB\FwAuthenticator\LoginProvider;
+namespace DEFBU\DefbuAuthenticator\LoginProvider;
 
 /**
  * Controller Abstract

@@ -3,7 +3,7 @@ declare(strict_types=1);
 /**
  * Copyright FraJa WeB - DEFBU (c) 2019
  */
-namespace FraJaWeB\FwAuthenticator\Controller;
+namespace DEFBU\DefbuAuthenticator\Controller;
 
 /**
  * Controller Abstract
@@ -29,14 +29,14 @@ class AuthenticatorController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionCo
 
     /**
      *
-     * @var \FraJaWeB\FwAuthenticator\Domain\Repository\BeUserRepository
+     * @var \DEFBU\DefbuAuthenticator\Domain\Repository\BeUserRepository
      * @Extbase\Inject
      */
     protected $beUserRepository;
 
     /**
      *
-     * @var \FraJaWeB\FwAuthenticator\Service\TotpService
+     * @var \DEFBU\DefbuAuthenticator\Service\TotpService
      */
     protected $totpService;
 
@@ -71,8 +71,8 @@ class AuthenticatorController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionCo
         $beUser = $this->beUserRepository->findByUid($uid);
         if (isset($beUser)) {
             $this->view->assign('user',$beUser);
-            if ($beUser->getTxFwauthenticatorActive()) {
-                $base64 = $this->totpService->getQr($beUser->getUsername(),$GLOBALS['TYPO3_CONF_VARS']['SYS']['sitename'],$beUser->getTxFwauthenticatorSecret());
+            if ($beUser->getTxDefbuauthenticatorActive()) {
+                $base64 = $this->totpService->getQr($beUser->getUsername(),$GLOBALS['TYPO3_CONF_VARS']['SYS']['sitename'],$beUser->getTxDefbuauthenticatorSecret());
                 $this->view->assign('qr',$base64);
             }
 
@@ -83,10 +83,10 @@ class AuthenticatorController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionCo
         $uid = $GLOBALS['BE_USER']->user["uid"];
         $beUser = $this->beUserRepository->findByUid($uid);
         if (isset($beUser)) {
-            $beUser->setTxFwauthenticatorActive(true);
+            $beUser->setTxDefbuauthenticatorActive(true);
             $this->beUserRepository->update($beUser);
             $secret = $this->totpService->generateSecretKey();
-            $beUser->setTxFwauthenticatorSecret($secret);
+            $beUser->setTxDefbuauthenticatorSecret($secret);
             $this->beUserRepository->update($beUser);
 
             $message = $this->languageService->sL('LLL:EXT:fw_authenticator/Resources/Private/Language/locallang_mod.xlf:Activate.message');
@@ -99,8 +99,8 @@ class AuthenticatorController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionCo
         $uid = $GLOBALS['BE_USER']->user["uid"];
         $beUser = $this->beUserRepository->findByUid($uid);
         if (isset($beUser)) {
-            $beUser->setTxFwauthenticatorActive(false);
-            $beUser->setTxFwauthenticatorSecret("");
+            $beUser->setTxDefbuauthenticatorActive(false);
+            $beUser->setTxDefbuauthenticatorSecret("");
             $this->beUserRepository->update($beUser);
             $message = $this->languageService->sL('LLL:EXT:fw_authenticator/Resources/Private/Language/locallang_mod.xlf:Deactivate.message');
             $this->addFlashMessage($message,'',\TYPO3\CMS\Core\Messaging\FlashMessage::ERROR);

@@ -1,4 +1,4 @@
-.t3-fwauthenticator-key {
+.t3-defbuauthenticator-key {
     width: 16px;
     height: 16px;
     background-image: url('/typo3conf/ext/fw_authenticator/Resources/Public/Icons/icon.svg');
@@ -6,6 +6,6 @@
     display: block;
 }
 
-.t3js-login-fwauthenticator-field {
+.t3js-login-defbuauthenticator-field {
     height: 41px;
 }

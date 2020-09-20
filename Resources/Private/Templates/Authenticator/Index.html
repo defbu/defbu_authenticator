@@ -4,11 +4,11 @@
 </f:section>
 <f:section name="content">
 	<f:flashMessages/>
-	<f:if condition="{user.txFwauthenticatorActive}">
+	<f:if condition="{user.txDefbuauthenticatorActive}">
 	<f:then>
 		<f:link.action action="deactivate" class="btn btn-default"><f:translate key="LLL:EXT:fw_authenticator/Resources/Private/Language/locallang_mod.xlf:Deactivate"/></f:link.action>
 		<h2><f:translate key="LLL:EXT:fw_authenticator/Resources/Private/Language/locallang_mod.xlf:Secret"/></h2>
-		<p><b>{user.txFwauthenticatorSecret}</b></p>
+		<p><b>{user.txDefbuauthenticatorSecret}</b></p>
 		<h2><f:translate key="LLL:EXT:fw_authenticator/Resources/Private/Language/locallang_mod.xlf:Setup"/></h2>
 		<ul>
 			<li><f:translate key="LLL:EXT:fw_authenticator/Resources/Private/Language/locallang_mod.xlf:Install"/></li>

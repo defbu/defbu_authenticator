@@ -3,7 +3,7 @@ declare(strict_types=1);
 /**
  * Copyright FraJa WeB - DEFBU (c) 2019
  */
-namespace FraJaWeB\FwAuthenticator\Domain\Model;
+namespace DEFBU\DefbuAuthenticator\Domain\Model;
 
 /**
  * Domain model User
@@ -18,42 +18,42 @@ class BeUser extends \TYPO3\CMS\Extbase\Domain\Model\BackendUser {
      *
      * @var bool
      */
-    protected $txFwauthenticatorActive;
+    protected $txDefbuauthenticatorActive;
 
     /**
      * @var string
      */
-    protected $txFwauthenticatorSecret;
+    protected $txDefbuauthenticatorSecret;
     /**
-     * @return boolean $txFwauthenticatorActive
+     * @return boolean $txDefbuauthenticatorActive
      */
-    public function getTxFwauthenticatorActive()
+    public function getTxDefbuauthenticatorActive()
     {
-        return $this->txFwauthenticatorActive;
+        return $this->txDefbuauthenticatorActive;
     }
 
     /**
-     * @return string $txFwauthenticatorSecret
+     * @return string $txDefbuauthenticatorSecret
      */
-    public function getTxFwauthenticatorSecret()
+    public function getTxDefbuauthenticatorSecret()
     {
-        return $this->txFwauthenticatorSecret;
+        return $this->txDefbuauthenticatorSecret;
     }
 
     /**
-     * @param boolean $txFwauthenticatorActive
+     * @param boolean $txDefbuauthenticatorActive
      */
-    public function setTxFwauthenticatorActive($txFwauthenticatorActive)
+    public function setTxDefbuauthenticatorActive($txDefbuauthenticatorActive)
     {
-        $this->txFwauthenticatorActive = $txFwauthenticatorActive;
+        $this->txDefbuauthenticatorActive = $txDefbuauthenticatorActive;
     }
 
     /**
-     * @param string $txFwauthenticatorSecret
+     * @param string $txDefbuauthenticatorSecret
      */
-    public function setTxFwauthenticatorSecret($txFwauthenticatorSecret)
+    public function setTxDefbuauthenticatorSecret($txDefbuauthenticatorSecret)
     {
-        $this->txFwauthenticatorSecret = $txFwauthenticatorSecret;
+        $this->txDefbuauthenticatorSecret = $txDefbuauthenticatorSecret;
     }
 
 

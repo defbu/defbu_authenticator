@@ -1,9 +1,9 @@
 <?php
 declare(strict_types=1);
 /**
- * Copyright FraJaWeB - DEFBU (c) 2019
+ * Copyright DEFBU - DEFBU (c) 2019
  */
-namespace FraJaWeB\FwAuthenticator\Domain\Repository;
+namespace DEFBU\DefbuAuthenticator\Domain\Repository;
 
 /**
  * Repository User

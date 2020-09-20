@@ -14,7 +14,7 @@ defined('TYPO3_MODE') || die();
     // Service type
     'auth',
     // Service key
-    'FraJaWeB\FwAuthenticator\Service\TotpAuthService',
+    'DEFBU\DefbuAuthenticator\Service\TotpAuthService',
     array(
         'title' => 'Time-based One-Time Password authentication service',
         'description' => 'This authentication service adds support for authentication based on Time-based One-Time Passwords',
@@ -27,11 +27,11 @@ defined('TYPO3_MODE') || die();
 
         'os' => '',
         'exec' => '',
-        'className' => FraJaWeB\FwAuthenticator\Service\TotpAuthService::class
+        'className' => DEFBU\DefbuAuthenticator\Service\TotpAuthService::class
     )
 );
 
-$GLOBALS['TYPO3_CONF_VARS']['EXTCONF']['backend']['loginProviders'][1433416747]['provider'] = FraJaWeB\FwAuthenticator\LoginProvider\LoginProvider::class;
+$GLOBALS['TYPO3_CONF_VARS']['EXTCONF']['backend']['loginProviders'][1433416747]['provider'] = DEFBU\DefbuAuthenticator\LoginProvider\LoginProvider::class;
 
 
 \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addService(
@@ -40,7 +40,7 @@ $GLOBALS['TYPO3_CONF_VARS']['EXTCONF']['backend']['loginProviders'][1433416747][
     // Service type
     'totp',
     // Service key
-    'FraJaWeB\FwAuthenticator\Service\TotpService',
+    'DEFBU\DefbuAuthenticator\Service\TotpService',
     array(
         'title' => 'Time-based One-Time Password Service',
         'description' => 'This service provides support for Time-based One-Time Passwords',
@@ -54,6 +54,6 @@ $GLOBALS['TYPO3_CONF_VARS']['EXTCONF']['backend']['loginProviders'][1433416747][
         'os' => '',
         'exec' => '',
 
-        'className' => FraJaWeB\FwAuthenticator\Service\TotpService::class
+        'className' => DEFBU\DefbuAuthenticator\Service\TotpService::class
     )
 );
