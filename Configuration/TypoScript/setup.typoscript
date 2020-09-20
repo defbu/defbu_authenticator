@@ -10,4 +10,13 @@ module.tx_fwtranscript {
            10 = EXT:fw_trancsript/Resources/Private/Backend/Layouts/
         }
     }
+    persistence {
+		classes {
+			UserSense\UserSense\Domain\Model\BeUser {
+				mapping {
+					tableName = be_users
+				}
+			}
+		}
+	}
 }
