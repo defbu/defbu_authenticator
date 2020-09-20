@@ -4,7 +4,6 @@
 </f:section>
 <f:section name="content">
 	<f:flashMessages/>
-	<f:debug title="all">{_all}</f:debug>
 	<f:if condition="{user.txDefbuauthenticatorActive}">
 	<f:then>
 		<f:link.action action="deactivate" class="btn btn-default"><f:translate key="LLL:EXT:defbu_authenticator/Resources/Private/Language/locallang_mod.xlf:Deactivate"/></f:link.action>
