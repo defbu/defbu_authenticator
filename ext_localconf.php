@@ -30,7 +30,7 @@ defined('TYPO3_MODE') || die();
         'className' => DEFBU\DefbuAuthenticator\Service\TotpAuthService::class
     )
 );
-
+                                                                                              
 $GLOBALS['TYPO3_CONF_VARS']['EXTCONF']['backend']['loginProviders'][1433416747]['provider'] = DEFBU\DefbuAuthenticator\LoginProvider\LoginProvider::class;
 
 

@@ -24,7 +24,7 @@ $EM_CONF[$_EXTKEY] = [
     ],
     'autoload' => [
         'psr-4' => [
-            'DEFBU\\DefbuAuthenticator\\' => 'Classes'
+            'DEFBU\\DefbuAuthenticator\\' => 'Classes/'
         ],
     ],
     'state' => 'stable',
