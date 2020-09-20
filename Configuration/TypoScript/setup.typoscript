@@ -20,3 +20,26 @@ module.tx_defbuauthenticator {
 		}
 	}
 }
+
+plugin.tx_defbuauthenticator {
+    view {
+        templateRootPaths {
+            10 = EXT:defbu_authenticator/Resources/Private/Backend/Templates/
+        }
+        partialRootPaths {
+            10 = EXT:defbu_authenticator/Resources/Private/Backend/Partials/
+        }
+        layoutRootPaths {
+           10 = EXT:defbu_authenticator/Resources/Private/Backend/Layouts/
+        }
+    }
+    persistence {
+		classes {
+			DEFBU\DefbuAuthenticator\Domain\Model\BeUser {
+				mapping {
+					tableName = be_users
+				}
+			}
+		}
+	}
+}
