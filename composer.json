@@ -1,5 +1,5 @@
 {
-	"name" : "Authenticator",
+	"name" : "Defbu Authenticator",
 	"description" : "A TOTP authenticator",
 	"homepage" : "https://www.defbu.nl",
 	"license" : "GPL-2.0-or-later",
