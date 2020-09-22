@@ -1,14 +1,17 @@
 <?php
 /**
- * Copyright notice
+ * This file is part of the TYPO3 CMS project.
  *
- * (c) 2020 DEFBU - Frank Buijze
+ * It is free software; you can redistribute it and/or modify it under
+ * the terms of the GNU General Public License, either version 2
+ * of the License, or any later version.
  *
- * All rights reserved
- */
-
-/**
- * Extension Manager/Repository config file for ext "user_sense".
+ * For the full copyright and license information, please read the
+ * LICENSE.txt file that was distributed with this source code.
+ *
+ * The TYPO3 project - inspiring people to share!
+ *
+ * @author Frank Buijze - DEFBU <info@defbu.nl>
  */
 $EM_CONF[$_EXTKEY] = [
     'title' => 'Authenticator',
