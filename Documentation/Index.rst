@@ -43,7 +43,7 @@ This documentation is community documentation for the TYPO3 extension {extension
 It is maintained as part of this third party extension.
 
 If you find an error or something is missing, please:
-`Report a Problem <https://github.com/frankbuijze/defbu_authenticator/issues/new>`__
+`Report a Problem <https://github.com/defbu/defbu_authenticator/issues/new>`__
 
 **Extension Manual**
 
