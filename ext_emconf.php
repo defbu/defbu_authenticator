@@ -12,7 +12,7 @@
  */
 $EM_CONF[$_EXTKEY] = [
     'title' => 'Authenticator',
-    'description' => '',
+    'description' => 'A simple 2FA time-based one-time authentication service for backend',
     'category' => 'module',
     'constraints' => [
         'depends' => [
