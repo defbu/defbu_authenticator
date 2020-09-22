@@ -5,6 +5,14 @@ declare(strict_types=1);
  */
 namespace DEFBU\DefbuAuthenticator\Service;
 
+/**
+ * Controller Abstract
+ *
+ * @author Frank Buijze - DEFBU <info@defbu.nl>
+ *
+ * All rights reserved
+ */
+
 class TotpAuthService extends \TYPO3\CMS\Core\Authentication\AbstractAuthenticationService
 {
     /**
