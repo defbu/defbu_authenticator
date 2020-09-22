@@ -37,5 +37,5 @@ $EM_CONF[$_EXTKEY] = [
     'author' => 'Frank Buijze',
     'author_email' => 'info@defbu.nl',
     'author_company' => 'Defbu',
-    'version' => '1.0.0',
+    'version' => '1.0.1',
 ];
