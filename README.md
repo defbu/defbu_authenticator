@@ -1,4 +1,4 @@
 Extension Manual
 ================
 
-Repository:  https://github.com/frankbuijze/defbu_authenticator
+Repository:  https://github.com/defbu/defbu_authenticator
